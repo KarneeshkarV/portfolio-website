@@ -69,7 +69,7 @@ $(document).ready(function () {
             "Problem Solver",
             "Tech Enthusiast",
         ],
-        typeSpeed: 100,
+        typeSpeed: 500,
         backSpeed: 60,
         loop: true,
     });
@@ -98,7 +98,7 @@ $(document).ready(function () {
     });
 
     // --- Vim Navigation --- 
-    const scrollAmount = 250; // Increased from 100 to 250 pixels for faster scrolling
+    const scrollAmount = 700; // Increased from 100 to 250 pixels for faster scrolling
     const ggTimeout = 500; // Milliseconds for gg detection
     let lastKeyPressTime = 0;
     let lastKey = '';

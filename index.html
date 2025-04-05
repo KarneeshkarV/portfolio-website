@@ -1,6 +1,7 @@
 <html lang="en">
   <head>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,16 +46,16 @@
     <nav class="navbar">
       <div class="max-width">
         <a href="#" class="logo"><img src="icon.png" alt="Logo" /></a>
-        <ul class="menu">
-          <li><a href="#home" class="menu-btn">Home</a></li>
-          <li><a href="#about" class="menu-btn">About</a></li>
-          <li><a href="#tech-skills" class="menu-btn">Tech Skills</a></li>
-          <li>
-            <a href="#skills-hobbies" class="menu-btn">Skills and Hobbies</a>
-          </li>
-          <li><a href="#contact" class="menu-btn">Contact</a></li>
-        </ul>
-        <button class="menu-btn">
+<ul class="menu">
+  <li><a href="#home" class="menu-btn">Home</a></li>
+  <li><a href="#about" class="menu-btn">About</a></li>
+  <li><a href="#experience" class="menu-btn">Experience</a></li>
+  <li><a href="#projects" class="menu-btn">Projects</a></li>
+  <li><a href="#tech-skills" class="menu-btn">Tech Skills</a></li>
+  <li><a href="#skills-hobbies" class="menu-btn">Skills and Hobbies</a></li>
+  <li><a href="#contact" class="menu-btn">Contact</a></li>
+</ul>
+       <button class="menu-btn">
           <i class="fas fa-bars"></i>
         </button>
       </div>
@@ -65,7 +66,7 @@
       <div class="max-width">
         <div class="home-content">
           <div class="text-1">Hello, my name is</div>
-          <div class="text-2">karneeshkar</div>
+          <div class="text-2">Karneeshkar</div>
           <div class="text-3">And I'm a <span class="typing"></span></div>
           <div class="text-4"> <span class="typing-2"></span></div>
           <a href="#contact">Hire me</a>
@@ -127,7 +128,123 @@
         </div>
       </div>
     </section>
+<!-- experience section start -->
+<section class="experience" id="experience">
+  <div class="max-width">
+    <h2 class="title">My Experience</h2>
+    <div class="exp-content">
+      <div class="card">
+        <div class="box">
+          <div class="company">Visteon</div>
+          <div class="position">Embedded Systems Developer (Incoming)</div>
+          <div class="duration">Jan 2025 - Present</div>
+          <ul>
+            <li>Optimized real-time automobile dashboard systems reducing processing latency by 25% through C programming improvements</li>
+            <li>Developed fault-tolerant microcontroller code with comprehensive error handling for critical automotive components</li>
+            <li>Created diagnostic routines detecting system anomalies with 95% accuracy, improving vehicle system reliability</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="company">UpWork</div>
+          <div class="position">Freelance Developer</div>
+          <div class="duration">Nov 2024 - Jan 2025</div>
+          <ul>
+            <li>Built an enterprise-level RAG system for legal applications with 92% accuracy, incorporating vector databases and fine-tuned LLMs</li>
+            <li>Developed embedded solutions for audio processing on STM32/ESP32 platforms, achieving 40% improved memory efficiency</li>
+            <li>Delivered 10+ successful projects with 100% client satisfaction rating and 4.9/5 average feedback score</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="company">Procter & Gamble</div>
+          <div class="position">IoT Developer and Automation Intern</div>
+          <div class="duration">Dec 2024 - Jan 2025</div>
+          <ul>
+            <li>Implemented IIoT monitoring system across 5 production lines, collecting 2M+ data points daily with 99.8% uptime</li>
+            <li>Developed automated quality control processes reducing manual inspection time by 40% and improving defect detection by 15%</li>
+            <li>Integrated sensor data with SAP MES using custom middleware, enabling real-time production analytics</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="company">TYNATECH INGENIOUS PVT LTD</div>
+          <div class="position">IoT and LoRaWAN Developer</div>
+          <div class="duration">May 2023 - Jun 2023</div>
+          <ul>
+            <li>Engineered RESTful APIs and webhooks enabling seamless integration between 50+ LoRaWAN devices and cloud platforms</li>
+            <li>Optimized UART-LoRaWAN interface increasing throughput by 30% with efficient buffer management techniques</li>
+            <li>Implemented MQTT protocol for real-time visualization of gateway data, processing 100+ messages/second</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- projects section start -->
+<section class="projects" id="projects">
+  <div class="max-width">
+    <h2 class="title">My Projects</h2>
+    <div class="project-content">
+      <div class="card">
+        <div class="box">
+          <div class="project-title">Multipurpose VR Gloves with Gesture Recognition</div>
+          <div class="tech-stack">Technologies: Unity, C#, Python, ESP32, Flex Sensors, IMU</div>
+          <div class="date">Sept 2024</div>
+          <ul>
+            <li>Engineered VR gloves capturing 15+ distinct gestures with 92% accuracy using calibrated flex sensors and machine learning</li>
+            <li>Developed custom web interface allowing non-technical users to map gestures to 20+ different system commands</li>
+            <li>Implemented low-latency (<20ms) wireless communication between gloves and host system</li>
+          </ul>
+          <a href="https://github.com/watninja68/vr-gloves" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="project-title">Instagram Automation Bot</div>
+          <div class="tech-stack">Technologies: Python, Meta Graph API, FastAPI, Redis, GPT models, AWS</div>
+          <div class="date">Dec 2024</div>
+          <ul>
+            <li>Created cloud-deployed Instagram bot handling 1000+ interactions daily with 99.5% uptime</li>
+            <li>Implemented sentiment analysis using fine-tuned LLMs achieving 88% accuracy in message intent classification</li>
+            <li>Designed Redis-based caching layer reducing API calls by 65% and improving response times to under 500ms</li>
+          </ul>
+          <a href="https://github.com/watninja68/insta-bot" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="project-title">Smart Rhesus Macaque Deterrent System</div>
+          <div class="tech-stack">Technologies: Raspberry Pi, Jetson Nano, PyTorch, Computer Vision, Ultrasonic Emitters</div>
+          <div class="date">Mar 2024</div>
+          <ul>
+            <li>Developed edge-deployed computer vision system identifying macaques with 94% accuracy in varied lighting conditions</li>
+            <li>Created deterrent system using directional ultrasonic emitters, reducing campus intrusions by 90%</li>
+            <li>Implemented power management reducing system energy consumption by 35% for solar-powered deployment</li>
+          </ul>
+          <a href="https://github.com/watninja68/macaque-deterrent" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="project-title">Wearable Jump Height Measurement Device</div>
+          <div class="tech-stack">Technologies: ESP32, MPU6050, Flask, SQLite</div>
+          <div class="date">Mar 2024</div>
+          <ul>
+            <li>Built ankle-mounted measurement system achieving ±1cm accuracy compared to professional lab equipment</li>
+            <li>Implemented Kalman filtering algorithm reducing sensor noise by 80% for high-precision vertical displacement calculation</li>
+            <li>Created analytics dashboard visualizing performance trends across 6+ metrics for optimizing training programs</li>
+          </ul>
+          <a href="https://github.com/watninja68/jump-height" class="github-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- skills section start -->
     <section class="skills" id="skills">
       <div class="max-width">
@@ -210,11 +327,10 @@
           </div>
           <div class="card">
             <div class="box">
-              <i class="fab fa-playstation"></i>
-              <div class="text">Playing J-RPG's</div>
+              <i class="fab  devicon-vim-plain"></i>
+              <div class="text">VIM lover</div>
               <p>
-                Immersing in rich storytelling and strategic gameplay through
-                Japanese role-playing games.
+                I love configureaing my enviroment to boost my produtivity espsically my neovim config
               </p>
             </div>
           </div>

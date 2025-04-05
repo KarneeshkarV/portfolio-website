@@ -701,3 +701,146 @@
   border: 1px solid #ccc;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
+/* Experience Section Styles */
+.experience {
+  background: url(bn.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #000;
+}
+.experience .exp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+.experience .card {
+  background: rgba(249, 249, 249, 0.9);
+  padding: 30px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.experience .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.experience .card .box {
+  display: flex;
+  flex-direction: column;
+}
+.experience .card .company {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3883d3;
+  margin-bottom: 5px;
+}
+.experience .card .position {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.experience .card .duration {
+  font-size: 14px;
+  color: #6e6e6e;
+  margin-bottom: 15px;
+}
+.experience .card ul {
+  margin-left: 20px;
+}
+.experience .card ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Projects Section Styles */
+.projects {
+  padding: 100px 0;
+}
+.projects .project-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+.projects .card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.projects .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.projects .card .box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.projects .card .project-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3883d3;
+  margin-bottom: 10px;
+}
+.projects .card .tech-stack {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #6e6e6e;
+}
+.projects .card .date {
+  font-size: 14px;
+  color: #6e6e6e;
+  margin-bottom: 15px;
+}
+.projects .card ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.projects .card ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.projects .card .github-link {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: #3883d3;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+.projects .card .github-link:hover {
+  background: #6e6e6e;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .projects .project-content {
+    grid-template-columns: 1fr;
+  }
+  .experience .card {
+    padding: 20px;
+  }
+  .projects .card {
+    padding: 20px;
+  }
+  .experience .card .company {
+    font-size: 20px;
+  }
+  .experience .card .position {
+    font-size: 16px;
+  }
+  .projects .card .project-title {
+    font-size: 18px;
+  }
+}

@@ -55,8 +55,8 @@ $(document).ready(function () {
             "Problem Solver",
             "Tech Enthusiast",
         ],
-        typeSpeed: 500,
-        backSpeed: 350,
+        typeSpeed: 55,
+        backSpeed: 35,
         loop: true,
     };
 

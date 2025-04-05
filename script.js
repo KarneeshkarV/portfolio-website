@@ -98,7 +98,7 @@ $(document).ready(function () {
     });
 
     // --- Vim Navigation --- 
-    const scrollAmount = 60; // Pixels to scroll on j/k
+    const scrollAmount = 100; // Pixels to scroll on j/k
     const ggTimeout = 500; // Milliseconds for gg detection
     let lastKeyPressTime = 0;
     let lastKey = '';

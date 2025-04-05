@@ -1,5 +1,19 @@
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;700&display=swap");
 
+button {
+  border: none;       /* Remove the button's border */
+  outline: none;      /* Remove the focus outline */
+  background-color: #3883d3; /* Set a custom background */
+  color: #fff;        /* Text color */
+  padding: 12px 36px; /* Button padding */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;    /* Cursor on hover */
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #6e6e6e;
+}
   * {
     margin: 0;
     padding: 0;
@@ -149,63 +163,145 @@
   }
 
   /* Home Section Styles */
-  .home {
-    display: flex;
-    background: url(bn.jpg) no-repeat center;
+  /* =================================== */
+/* Complete CSS for Home Section       */
+/* =================================== */
+
+/* Keyframes for Rotation (Ensure this exists) */
+@keyframes rotate {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+/* --- Base Home Section Styles --- */
+.home {
+    position: relative; /* Essential for positioning children */
+    width: 100%;
     height: 100vh;
     min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Essential to contain skewed elements */
+
+    /* --- CHOOSE ONE BACKGROUND OPTION BELOW --- */
+
+    /* Option A: Original Image (Uncomment this block if you want the image) */
+    /*
+    background: url(bn.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    color: #000;
-  }
-  .home .max-width {
+    */
+
+    /* Option B: Plain Light Background (Like your last screenshot - Uncomment this line) */
+    background: #f8f8f8; /* Example light grey/off-white - Adjust as needed */
+
+    /* Option C: Plain White Background (Uncomment this line) */
+    /* background: #fff; */
+}
+
+/* --- Animated Background Container --- */
+/* This div sits between the main .home background and the content */
+.home__animated-background {
+    /* ** These rules are essential for the animation layer ** */
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-  }
-  .home .home-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .home .home-content .text-1 {
-    font-size: 27px;
-  }
-  .home .home-content .text-2 {
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-  }
-  .home .home-content .text-3 {
-    font-size: 40px;
-    margin: 5px 0;
-  }
-  .home .home-content .text-3 span {
-    color: #6e6e6e;
-    font-weight: 500;
-  }
-  .home .home-content .text-4 {
-    font-size: 40px;
-    margin: 5px 0;
-  }
-  .home .home-content .text-4 span {
-    color: #6e6e6e;
-    font-weight: 500;
-  }
-  .home .home-content a {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    transform: skewY(3deg) translateY(-80px); /* Skew effect */
+    z-index: 1; /* Above .home background (0), below content (2) */
+    background: transparent; /* Container MUST be transparent */
+}
+
+/* --- The Animated Texture itself (Pseudo-element) --- */
+/* ** These rules create the visible rotating texture ** */
+.home__animated-background::after {
+    content: '';
+    /* The dark rotating texture */
+    background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    width: 800%;
+    position: absolute;
+    top: -400%;
+    right: -400%;
+    height: 800%;
+    opacity: .15; /* Adjust visibility (Lower = fainter, Higher = stronger) */
+    animation-name: rotate;
+    animation-duration: 140s; /* Speed of rotation */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* --- Content Styling (Max-Width Container) --- */
+.home .max-width {
+     position: relative; /* Needed for z-index */
+     z-index: 2; /* Ensure content is on the very top */
+     max-width: 1300px;
+     padding: 0 80px;
+     margin: auto;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+}
+
+/* --- Content Styling (Text Block) --- */
+.home .home-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+}
+
+/* === Text Styling (Black Text) === */
+.home .home-content .text-1,
+.home .home-content .text-2,
+.home .home-content .text-3,
+.home .home-content .text-4 {
+    color: #000; /* Black Text */
+}
+/* Font sizes */
+.home .home-content .text-1 { font-size: 27px; }
+.home .home-content .text-2 { font-size: 75px; font-weight: 600; margin-left: -3px; }
+.home .home-content .text-3 { font-size: 40px; margin: 5px 0; }
+.home .home-content .text-4 { font-size: 40px; margin: 5px 0; }
+
+/* === Typing Animation Span Styling === */
+.home .home-content .text-3 span,
+.home .home-content .text-4 span {
+   color: #444; /* Dark Grey */
+   font-weight: 500;
+}
+
+/* === Button Styling (Dark button for light background) === */
+.home .home-content a {
     display: inline-block;
-    background: #6e6e6e;
-    color: #fff;
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
     font-size: 16px;
     font-weight: 500;
-    padding: 12px 36px;
+    padding: 10px 34px;
     margin-top: 20px;
     border-radius: 6px;
-    transition: background 0.3s ease;
-  }
-  .home .home-content a:hover {
-    background: #3883d3;
-  }
+    border: 2px solid #333; /* Dark border */
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.home .home-content a:hover {
+    background: #555; /* Lighter grey hover */
+    color: #fff;
+    border-color: #555;
+}
+
+/* =================================== */
+/* End Complete CSS for Home Section   */
+/* =================================== */
 
   /* About Section Styles */
   .about {
@@ -619,6 +715,7 @@
     }
     .skills-hobbies .carousel .card .box .text {
       font-size: 16px;
+      margin-left:1rem;
     }
     .skills-hobbies .carousel .card .box p {
       font-size: 14px;

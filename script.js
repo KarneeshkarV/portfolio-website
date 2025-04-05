@@ -79,7 +79,7 @@ $(document).ready(function () {
         margin: 20,
         loop: true,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeOut: 2000,
         autoplayHoverPause: true,
         responsive: {
             0: {
@@ -98,7 +98,7 @@ $(document).ready(function () {
     });
 
     // --- Vim Navigation --- 
-    const scrollAmount = 100; // Pixels to scroll on j/k
+    const scrollAmount = 250; // Increased from 100 to 250 pixels for faster scrolling
     const ggTimeout = 500; // Milliseconds for gg detection
     let lastKeyPressTime = 0;
     let lastKey = '';
@@ -150,16 +150,26 @@ $(document).ready(function () {
 
         switch (event.key) {
             case 'j':
-                window.scrollBy(0, scrollAmount);
+                // Use direct scrolling for immediate response rather than smooth scrolling
+                window.scrollBy({
+                    top: scrollAmount,
+                    behavior: 'auto'
+                });
                 lastKey = ''; // Reset gg sequence
                 break;
             case 'k':
-                window.scrollBy(0, -scrollAmount);
+                window.scrollBy({
+                    top: -scrollAmount,
+                    behavior: 'auto'
+                });
                 lastKey = ''; // Reset gg sequence
                 break;
             case 'g':
                 if (lastKey === 'g' && (now - lastKeyPressTime < ggTimeout)) {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'auto' // Changed from 'smooth' to 'auto' for faster response
+                    });
                     lastKey = ''; // Reset after successful gg
                 } else {
                     lastKey = 'g';
@@ -167,7 +177,10 @@ $(document).ready(function () {
                 }
                 break;
             case 'G': // Shift + g
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'auto' // Changed from 'smooth' to 'auto'
+                });
                 lastKey = ''; // Reset gg sequence
                 break;
             case '?': // Show/hide vim help with ? key
@@ -193,4 +206,4 @@ $(document).ready(function () {
         colonPressed = false;
     });
     // --- End Vim Navigation --- 
-}); 
+});

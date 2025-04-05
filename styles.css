@@ -1,8 +1,21 @@
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;700&display=swap");
+
+/* --- Removed problematic global img style --- */
+/*
 img{
-height:700px;
-    width:30%;
-  }
+  height:700px;
+  width:30%;
+}
+*/
+
+/* --- Added safer default image style --- */
+img {
+  max-width: 100%; /* Ensures images scale down */
+  height: auto;   /* Maintains aspect ratio */
+  display: block; /* Removes potential extra space below images */
+}
+
+
 button {
   border: none;       /* Remove the button's border */
   outline: none;      /* Remove the focus outline */
@@ -12,6 +25,7 @@ button {
   border-radius: 6px; /* Rounded corners */
   cursor: pointer;    /* Cursor on hover */
   transition: background 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 button:hover {
@@ -109,7 +123,7 @@ button:hover {
     justify-content: space-between;
   }
   .logo img {
-    width: 100px;
+    width: 100px; /* Keep logo size manageable */
     height: auto;
   }
   .navbar .menu li {
@@ -123,6 +137,8 @@ button:hover {
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
+    padding: 5px 0; /* Add some vertical padding for easier tapping if needed */
+     -webkit-tap-highlight-color: transparent;
   }
   .navbar .menu li a:hover {
     color: #6e6e6e;
@@ -131,10 +147,12 @@ button:hover {
     color: #3883d3;
     font-size: 23px;
     cursor: pointer;
-    display: none;
+    display: none; /* Hidden by default */
+    padding: 10px; /* Make hamburger easier to tap */
+     -webkit-tap-highlight-color: transparent;
   }
   .navbar .menu-btn i.active:before {
-    content: "\f00d";
+    content: "\f00d"; /* Font Awesome close icon */
   }
 
   /* Scroll Up Button */
@@ -155,6 +173,7 @@ button:hover {
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease;
+     -webkit-tap-highlight-color: transparent;
   }
   .scroll-up-btn.show {
     bottom: 30px;
@@ -166,781 +185,550 @@ button:hover {
   }
 
   /* Home Section Styles */
-  /* =================================== */
-/* Complete CSS for Home Section       */
-/* =================================== */
-
-/* Keyframes for Rotation (Ensure this exists) */
-@keyframes rotate {
-	0% {
-		transform: rotateZ(0deg);
-	}
-	100% {
-		transform: rotateZ(360deg);
-	}
-}
-
-/* --- Base Home Section Styles --- */
-.home {
-    position: relative; /* Essential for positioning children */
+  @keyframes rotate {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+  }
+  .home {
+    position: relative;
     width: 100%;
     height: 100vh;
-    min-height: 500px;
+    min-height: 500px; /* Ensure minimum height */
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    overflow: hidden; /* Essential to contain skewed elements */
-
-    /* --- CHOOSE ONE BACKGROUND OPTION BELOW --- */
-
-    /* Option A: Original Image (Uncomment this block if you want the image) */
-    /*
-    background: url(bn.jpg) no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    */
-
-    /* Option B: Plain Light Background (Like your last screenshot - Uncomment this line) */
-    background: #f8f8f8; /* Example light grey/off-white - Adjust as needed */
-
-    /* Option C: Plain White Background (Uncomment this line) */
-    /* background: #fff; */
-}
-
-/* --- Animated Background Container --- */
-/* This div sits between the main .home background and the content */
-.home__animated-background {
-    /* ** These rules are essential for the animation layer ** */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
     overflow: hidden;
-    transform: skewY(3deg) translateY(-80px); /* Skew effect */
-    z-index: 1; /* Above .home background (0), below content (2) */
-    background: transparent; /* Container MUST be transparent */
-}
-
-/* --- The Animated Texture itself (Pseudo-element) --- */
-/* ** These rules create the visible rotating texture ** */
-.home__animated-background::after {
+    background: #f8f8f8; /* Plain light background */
+  }
+  .home__animated-background {
+    top: 0; left: 0; width: 100%; height: 100%;
+    position: absolute; overflow: hidden;
+    transform: skewY(3deg) translateY(-80px);
+    z-index: 1; background: transparent;
+    pointer-events: none; /* Ensure it doesn't block interaction */
+  }
+  .home__animated-background::after {
     content: '';
-    /* The dark rotating texture */
     background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
-    width: 800%;
-    position: absolute;
-    top: -400%;
-    right: -400%;
-    height: 800%;
-    opacity: .15; /* Adjust visibility (Lower = fainter, Higher = stronger) */
-    animation-name: rotate;
-    animation-duration: 140s; /* Speed of rotation */
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-/* --- Content Styling (Max-Width Container) --- */
-.home .max-width {
-     position: relative; /* Needed for z-index */
-     z-index: 2; /* Ensure content is on the very top */
-     max-width: 1300px;
-     padding: 0 80px;
-     margin: auto;
-     width: 100%;
-     display: flex;
-     justify-content: center;
-}
-
-/* --- Content Styling (Text Block) --- */
-.home .home-content {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     text-align: center;
-}
-
-/* === Text Styling (Black Text) === */
-.home .home-content .text-1,
-.home .home-content .text-2,
-.home .home-content .text-3,
-.home .home-content .text-4 {
-    color: #000; /* Black Text */
-}
-/* Font sizes */
-.home .home-content .text-1 { font-size: 27px; }
-.home .home-content .text-2 { font-size: 75px; font-weight: 600; margin-left: -3px; }
-.home .home-content .text-3 { font-size: 40px; margin: 5px 0; }
-.home .home-content .text-4 { font-size: 40px; margin: 5px 0; }
-
-/* === Typing Animation Span Styling === */
-.home .home-content .text-3 span,
-.home .home-content .text-4 span {
-   color: #444; /* Dark Grey */
-   font-weight: 500;
-}
-
-/* === Button Styling (Dark button for light background) === */
-.home .home-content a {
-    display: inline-block;
-    background: #333; /* Dark background */
-    color: #fff; /* White text */
-    font-size: 16px;
-    font-weight: 500;
-    padding: 10px 34px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid #333; /* Dark border */
+    width: 800%; position: absolute; top: -400%;
+    right: -400%; height: 800%; opacity: .15;
+    animation: rotate 140s infinite linear;
+  }
+  .home .max-width {
+     position: relative; z-index: 2;
+     max-width: 1300px; padding: 0 80px; margin: auto;
+     width: 100%; display: flex; justify-content: center;
+  }
+  .home .home-content {
+     display: flex; flex-direction: column;
+     align-items: center; text-align: center;
+  }
+  .home .home-content .text-1,
+  .home .home-content .text-2,
+  .home .home-content .text-3,
+  .home .home-content .text-4 { color: #000; }
+  .home .home-content .text-1 { font-size: 27px; }
+  .home .home-content .text-2 { font-size: 75px; font-weight: 600; margin-left: -3px; }
+  .home .home-content .text-3 { font-size: 40px; margin: 5px 0; }
+  .home .home-content .text-4 { font-size: 40px; margin: 5px 0; }
+  .home .home-content .text-3 span,
+  .home .home-content .text-4 span { color: #444; font-weight: 500; }
+  .home .home-content a {
+    display: inline-block; background: #333; color: #fff;
+    font-size: 16px; font-weight: 500; padding: 10px 34px;
+    margin-top: 20px; border-radius: 6px; border: 2px solid #333;
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.home .home-content a:hover {
-    background: #555; /* Lighter grey hover */
-    color: #fff;
-    border-color: #555;
-}
-
-/* =================================== */
-/* End Complete CSS for Home Section   */
-/* =================================== */
+     -webkit-tap-highlight-color: transparent;
+  }
+  .home .home-content a:hover { background: #555; color: #fff; border-color: #555; }
 
   /* About Section Styles */
   .about {
     background: url(bn.jpg) no-repeat center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Parallax effect - can be laggy on mobile, consider removing for mobile */
     color: #000;
   }
   .about .about-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Will change to column on mobile */
     align-items: center;
-    margin-top: 80px;
+    margin-top: 80px; /* Will be adjusted on mobile */
   }
   .about .about-content .column {
-    flex: 1;
+    flex: 1; /* Will not apply when flex-direction is column */
   }
   .about .about-content .left img {
-    width: 100%;
+    width: 100%; /* Let the safe default handle this */
+    border-radius: 6px; /* Optional: Add slight rounding */
   }
   .about .about-content .right {
-    margin-left: 50px;
+    margin-left: 50px; /* Will be removed on mobile */
   }
-  .about .about-content .right .text {
-    font-size: 30px;
-    font-weight: 500;
-  }
-  .about .about-content .right p {
-    font-size: 16px;
-    margin: 20px 0;
-    color: #6e6e6e;
-    line-height: 1.6;
-  }
-  .about .about-content .right p:last-child {
-    margin-bottom: 40px;
-  }
+  .about .about-content .right .text { font-size: 30px; font-weight: 500; }
+  .about .about-content .right p { font-size: 16px; margin: 20px 0; color: #6e6e6e; line-height: 1.6; }
+  .about .about-content .right p:last-child { margin-bottom: 40px; }
   .about .about-content .right .btn {
-    background: #3883d3;
-    color: #fff;
-    padding: 12px 36px;
-    border-radius: 6px;
+    /* Using general button styles */
     font-size: 16px;
     font-weight: 500;
-    transition: background 0.3s ease;
+     -webkit-tap-highlight-color: transparent;
   }
-  .about .about-content .right .btn:hover {
-    background: #6e6e6e;
-  }
+   /* No hover needed for mobile */
 
   /* Services Section Styles */
   .services .serv-content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
+    flex-wrap: wrap; /* Explicitly allow wrapping */
+    justify-content: space-between; /* Adjust later if needed */
+    gap: 20px; /* Use gap for spacing */
+    margin-top: 80px; /* Adjust later */
   }
   .services .serv-content .card {
-    flex-basis: calc(33.333% - 20px);
+    flex-basis: calc(33.333% - 20px); /* Adjust for gap, will change on mobile */
     background: #f9f9f9;
     padding: 30px 20px;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease; /* Hover not relevant on mobile */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Add subtle shadow */
   }
-  .services .serv-content .card:hover {
-    background: #ddd;
-  }
-  .services .serv-content .card .box {
-    display: flex;
-    align-items: center;
-  }
-  .services .serv-content .card .box i {
-    font-size: 35px;
-    color: #3883d3;
-    margin-right: 20px;
-  }
-  .services .serv-content .card .box .text {
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .services .serv-content .card .box p {
-    font-size: 16px;
-    margin-top: 8px;
-    color: #6e6e6e;
-  }
+  /* .services .serv-content .card:hover removed for mobile focus */
+  .services .serv-content .card .box { display: flex; align-items: center; }
+  .services .serv-content .card .box i { font-size: 35px; color: #3883d3; margin-right: 20px; }
+  .services .serv-content .card .box .text { font-size: 20px; font-weight: 500; }
+  .services .serv-content .card .box p { font-size: 16px; margin-top: 8px; color: #6e6e6e; }
 
   /* Skills Section Styles */
   .skills {
     background: url(bn.jpg) no-repeat center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Consider removing for mobile */
     color: #000;
   }
   .skills .skills-content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
+    justify-content: space-between; /* Will change to column */
+    margin-top: 80px; /* Adjust later */
   }
-  .skills .skills-content .column {
-    flex: 1;
+  .skills .skills-content .column { flex: 1; } /* Not relevant when column */
+  .skills .skills-content .left { /* Assuming left column holds text */
+      margin-right: 50px; /* Will be removed on mobile */
   }
-  .skills .skills-content .text {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 30px;
+  .skills .skills-content .text { font-size: 30px; font-weight: 500; margin-bottom: 30px; }
+  .skills .skills-content .column.right .bars { margin-bottom: 30px; }
+  .skills .skills-content .column.right .bars:last-child { margin-bottom: 0; }
+  .skills .skills-content .column.right .bars .info { display: flex; justify-content: space-between; margin-bottom: 10px; }
+  .skills .skills-content .column.right .bars .info span:first-child { font-size: 18px; font-weight: 500; color: #6e6e6e; }
+  .skills .skills-content .column.right .bars .info span:last-child { font-size: 16px; font-weight: 400; color: #3883d3; }
+  .skills .skills-content .column.right .bars .line { height: 8px; width: 100%; background: #f1f1f1; border-radius: 8px; position: relative; overflow: hidden; /* Ensure ::before stays inside */ }
+  .skills .skills-content .column.right .bars .line::before {
+    content: ""; position: absolute; left: 0; bottom: 0;
+    height: 100%; background: #3883d3; border-radius: 8px;
+    /* Widths defined below */
   }
-  .skills .skills-content .column.right .bars {
-    margin-bottom: 30px;
-  }
-  .skills .skills-content .column.right .bars:last-child {
-    margin-bottom: 0;
-  }
-  .skills .skills-content .column.right .bars .info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  .skills .skills-content .column.right .bars .info span:first-child {
-    font-size: 18px;
-    font-weight: 500;
-    color: #6e6e6e;
-  }
-  .skills .skills-content .column.right .bars .info span:last-child {
-    font-size: 16px;
-    font-weight: 400;
-    color: #3883d3;
-  }
-  .skills .skills-content .column.right .bars .line {
-    height: 8px;
-    width: 100%;
-    background: #f1f1f1;
-    border-radius: 8px;
-    position: relative;
-  }
-  .skills .skills-content .column.right .bars .line:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    background: #3883d3;
-    border-radius: 8px;
-  }
-  .skills .skills-content .column.right .bars .line.java:before {
-    width: 90%;
-  }
-  .skills .skills-content .column.right .bars .line.python:before {
-    width: 85%;
-  }
-  .skills .skills-content .column.right .bars .line.javascript:before {
-    width: 80%;
-  }
-  .skills .skills-content .column.right .bars .line.react:before {
-    width: 75%;
-  }
-  .skills .skills-content .column.right .bars .line.nodejs:before {
-    width: 70%;
-  }
+  .skills .skills-content .column.right .bars .line.java::before { width: 90%; }
+  .skills .skills-content .column.right .bars .line.python::before { width: 85%; }
+  .skills .skills-content .column.right .bars .line.javascript::before { width: 80%; }
+  .skills .skills-content .column.right .bars .line.react::before { width: 75%; }
+  .skills .skills-content .column.right .bars .line.nodejs::before { width: 70%; }
 
   /* Skills & Hobbies Section Styles */
+  /* Assuming Owl Carousel handles responsiveness - Styles focus on appearance */
+  .skills-hobbies .carousel { /* Add relative positioning if needed for nav */
+      position: relative;
+      margin-top: 50px; /* Adjust if needed */
+  }
   .skills-hobbies .carousel .owl-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    /* Consider moving nav outside carousel bounds on mobile if space is tight */
+    /* These styles might need adjustment based on Owl Carousel version/config */
+    position: absolute; top: 50%; transform: translateY(-50%); width: 100%;
+    display: flex; justify-content: space-between; padding: 0 10px; /* Add padding */
+    pointer-events: none; /* Container shouldn't block */
   }
   .skills-hobbies .carousel .owl-nav .owl-prev,
   .skills-hobbies .carousel .owl-nav .owl-next {
-    background: #3883d3;
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-size: 18px;
-    display: inline-block;
-    transition: background 0.3s ease;
+    background: #3883d3; color: #fff; padding: 8px 15px; /* Slightly smaller padding */
+    border-radius: 30px; font-size: 18px; display: inline-block;
+    transition: background 0.3s ease; cursor: pointer;
+    pointer-events: auto; /* Buttons should be clickable */
+     -webkit-tap-highlight-color: transparent;
   }
-  .skills-hobbies .carousel .owl-nav .owl-prev:hover,
-  .skills-hobbies .carousel .owl-nav .owl-next:hover {
-    background: #6e6e6e;
-  }
-  .skills-hobbies .carousel .owl-nav .owl-prev {
-    margin-left: 10px;
-  }
-  .skills-hobbies .carousel .owl-nav .owl-next {
-    margin-right: 10px;
-  }
-  .skills-hobbies .carousel .owl-dots {
-    text-align: center;
-    margin-top: 20px;
-  }
+  /* No hover needed for mobile */
+  .skills-hobbies .carousel .owl-dots { text-align: center; margin-top: 20px; }
   .skills-hobbies .carousel .owl-dots .owl-dot {
-    height: 15px;
-    width: 15px;
-    background: #6e6e6e;
-    display: inline-block;
-    margin: 0 5px;
-    border-radius: 50%;
-    transition: background 0.3s ease;
+    height: 13px; width: 13px; /* Slightly smaller dots */
+    background: #ccc; display: inline-block; margin: 0 5px;
+    border-radius: 50%; transition: background 0.3s ease;
   }
-  .skills-hobbies .carousel .owl-dots .owl-dot.active {
-    background: #3883d3;
-  }
+  .skills-hobbies .carousel .owl-dots .owl-dot.active { background: #3883d3; }
   .skills-hobbies .carousel .card {
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    padding: 20px; background: #f9f9f9; border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin: 5px; /* Add margin for spacing in carousel */
+    /* transition removed for mobile */
   }
-  .skills-hobbies .carousel .card:hover {
-    background: #ddd;
-  }
-  .skills-hobbies .carousel .card .box {
-    display: flex;
-    align-items: center;
-  }
-  .skills-hobbies .carousel .card .box i {
-    font-size: 35px;
-    color: #3883d3;
-    margin-right: 20px;
-  }
-  .skills-hobbies .carousel .card .box .text {
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .skills-hobbies .carousel .card .box p {
-    font-size: 16px;
-    margin-top: 8px;
-    color: #6e6e6e;
-  }
+  .skills-hobbies .carousel .card .box { display: flex; align-items: center; }
+  .skills-hobbies .carousel .card .box i { font-size: 35px; color: #3883d3; margin-right: 15px; /* Adjust spacing */ }
+  .skills-hobbies .carousel .card .box .text { font-size: 20px; font-weight: 500; }
+  .skills-hobbies .carousel .card .box p { font-size: 16px; margin-top: 8px; color: #6e6e6e; }
 
   /* Contact Section Styles */
   .contact {
     background: url(bn.jpg) no-repeat center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Consider removing for mobile */
     color: #000;
   }
   .contact .contact-content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
+    justify-content: space-between; /* Will change to column */
+    margin-top: 80px; /* Adjust later */
+    gap: 30px; /* Add gap for spacing when stacked */
   }
-  .contact .contact-content .column {
-    flex: 1;
-  }
-  .contact .contact-content .left .text {
-    font-size: 30px;
-    font-weight: 500;
-  }
-  .contact .contact-content .left p {
-    font-size: 16px;
-    margin-top: 20px;
-    color: #6e6e6e;
-    line-height: 1.6;
-  }
-  .contact .contact-content .left .icons {
-    margin-top: 20px;
+  .contact .contact-content .column { flex: 1; } /* Not relevant when column */
+  .contact .contact-content .left .text { font-size: 30px; font-weight: 500; }
+  .contact .contact-content .left p { font-size: 16px; margin-top: 20px; color: #6e6e6e; line-height: 1.6; }
+  .contact .contact-content .left .icons { margin-top: 20px; }
+  .contact .contact-content .left .icons a { /* Wrap icons in links */
+      display: inline-block; margin-right: 15px; /* Adjust spacing */
+       -webkit-tap-highlight-color: transparent;
   }
   .contact .contact-content .left .icons i {
-    font-size: 30px;
-    color: #3883d3;
-    margin-right: 20px;
-    transition: color 0.3s ease;
+    font-size: 30px; color: #3883d3; transition: color 0.3s ease;
   }
-  .contact .contact-content .left .icons i:hover {
-    color: #6e6e6e;
-  }
+  /* No hover needed for mobile */
   .contact .contact-content .right form .fields {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    margin-top: 20px; gap: 20px; /* Use gap */
   }
   .contact .contact-content .right form .field,
   .contact .contact-content .right form .textarea {
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Handled by gap */
+    width: 100%; /* Default to full width, adjust if needed */
   }
+   .contact .contact-content .right form .fields.two-cols .field {
+      width: calc(50% - 10px); /* Example for two side-by-side fields */
+   }
   .contact .contact-content .right form .field input,
   .contact .contact-content .right form .textarea textarea {
-    width: calc(100% - 10px);
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: border-color 0.5s ease;
+    width: 100%; /* Take full width of parent */
+    padding: 12px; /* Slightly larger padding for touch */
+    border-radius: 6px; border: 1px solid #ccc; outline: none;
+    transition: border-color 0.3s ease; font-size: 16px; /* Ensure readable font size */
+    -webkit-appearance: none; /* Prevent iOS styling */
   }
-  .contact .contact-content .right form .field input,
-  .contact .contact-content .right form .textarea textarea {
+  .contact .contact-content .right form .field input:focus,
+  .contact .contact-content .right form .textarea textarea:focus {
     border-color: #3883d3;
   }
-  .contact .contact-content .right form .textarea textarea {
-    height: 100px;
-    resize: none;
-  }
-  .contact .contact-content .right form .button-area {
-    margin-top: 20px;
-  }
+  .contact .contact-content .right form .textarea textarea { height: 120px; resize: vertical; /* Allow vertical resize */ }
+  .contact .contact-content .right form .button-area { margin-top: 20px; text-align: left; /* Align button */ }
   .contact .contact-content .right form .button {
-    background: #3883d3;
-    color: #fff;
-    padding: 12px 36px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    /* Uses general button styles */
+     -webkit-tap-highlight-color: transparent;
   }
-  .contact .contact-content .right form .button:hover {
-    background: #6e6e6e;
-  }
+  /* No hover needed for mobile */
 
   /* Footer Section Styles */
   .footer {
-    background: #000;
-    color: #fff;
-    padding: 10px 0;
-    font-size: 16px;
+    background: #111; /* Slightly darker */
+    color: #aaa; /* Slightly lighter text */
+    padding: 20px 0; /* More padding */
+    font-size: 14px; /* Adjust size */
     text-align: center;
   }
+   .footer a {
+       color: #fff; /* Make links stand out */
+       text-decoration: underline;
+   }
 
-  /* Media Queries */
-  @media (max-width: 1200px) {
-    .max-width {
-      padding: 0 50px;
-    }
+  /* Experience Section Styles */
+  .experience {
+    background: url(bn.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed; /* Consider removing for mobile */
+    color: #000;
   }
+  .experience .exp-content {
+    display: flex; flex-direction: column;
+    gap: 30px; margin-top: 50px;
+  }
+  .experience .card {
+    background: rgba(249, 249, 249, 0.95); /* Slightly more opaque */
+    padding: 25px; border-radius: 6px;
+    /* transition removed for mobile */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  /* No hover needed for mobile */
+  .experience .card .box { display: flex; flex-direction: column; }
+  .experience .card .company { font-size: 24px; font-weight: 600; color: #3883d3; margin-bottom: 5px; }
+  .experience .card .position { font-size: 18px; font-weight: 500; margin-bottom: 5px; }
+  .experience .card .duration { font-size: 14px; color: #6e6e6e; margin-bottom: 15px; }
+  .experience .card ul { margin-left: 20px; padding-left: 0; /* Remove default padding if margin is used */ list-style: disc; /* Ensure bullets show */ }
+  .experience .card ul li { margin-bottom: 10px; /* More space */ line-height: 1.6; font-size: 15px; /* Ensure readable */ }
 
-  @media (max-width: 1080px) {
-    .max-width {
-      padding: 0 40px;
-    }
+  /* Projects Section Styles */
+  .projects { padding: 100px 0; } /* Adjust padding on mobile */
+  .projects .project-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; margin-top: 50px;
   }
-
-  @media (max-width: 991px) {
-    .max-width {
-      padding: 0 30px;
-    }
+  .projects .card {
+    background: #f9f9f9; padding: 25px; border-radius: 6px;
+    /* transition removed for mobile */
+    height: 100%; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex; flex-direction: column; /* Ensure box takes height */
   }
-
-  @media (max-width: 768px) {
-    .max-width {
-      padding: 0 20px;
-    }
-    .navbar .menu {
-      display: none;
-    }
-    .navbar .menu-btn {
-      display: block;
-    }
-    .navbar.active .menu {
-      display: block;
-      position: absolute;
-      top: 80px;
-      left: 0;
-      width: 100%;
-      background: #6e6e6e;
-      padding: 10px 0;
-      border-top: 1px solid #fff;
-    }
-    .navbar.active .menu li {
-      width: 100%;
-      text-align: center;
-    }
-    .navbar.active .menu li a {
-      margin-left: 0;
-      display: block;
-      padding: 10px 20px;
-    }
+  /* No hover needed for mobile */
+  .projects .card .box { display: flex; flex-direction: column; height: 100%; }
+  .projects .card .project-title { font-size: 20px; font-weight: 600; color: #3883d3; margin-bottom: 10px; }
+  .projects .card .tech-stack { font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #6e6e6e; }
+  .projects .card .date { font-size: 14px; color: #6e6e6e; margin-bottom: 15px; }
+  .projects .card ul { margin-left: 20px; margin-bottom: 20px; flex-grow: 1; padding-left: 0; list-style: disc; }
+  .projects .card ul li { margin-bottom: 8px; line-height: 1.6; font-size: 15px; }
+  .projects .card .github-link {
+    align-self: flex-start; padding: 10px 20px; /* Better tap size */
+    background: #3883d3; color: #fff; border-radius: 4px;
+    /* transition removed for mobile */
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: auto; /* Pushes to bottom */
+    text-decoration: none;
+    font-size: 15px;
+     -webkit-tap-highlight-color: transparent;
   }
-
-  @media (max-width: 500px) {
-    .home .home-content .text-2 {
-      font-size: 50px;
-    }
-    .home .home-content .text-3 {
-      font-size: 30px;
-    }
-    .home .home-content .text-4 {
-      font-size: 30px;
-    }
-    .home .home-content a {
-      font-size: 14px;
-    }
-    .about .about-content .right .text {
-      font-size: 24px;
-    }
-    .about .about-content .right p {
-      font-size: 14px;
-    }
-    .about .about-content .right .btn {
-      font-size: 14px;
-    }
-    .services .serv-content .card .box i {
-      font-size: 30px;
-    }
-    .services .serv-content .card .box .text {
-      font-size: 16px;
-    }
-    .services .serv-content .card .box p {
-      font-size: 14px;
-    }
-    .skills .skills-content .text {
-      font-size: 24px;
-    }
-    .skills .skills-content .column.right .bars .info span {
-      font-size: 16px;
-    }
-    .skills .skills-content .column.right .bars .info span {
-      font-size: 14px;
-    }
-    .skills-hobbies .carousel .card .box i {
-      font-size: 30px;
-    }
-    .skills-hobbies .carousel .card .box .text {
-      font-size: 16px;
-      margin-left:1rem;
-    }
-    .skills-hobbies .carousel .card .box p {
-      font-size: 14px;
-    }
-    .contact .contact-content .left .text {
-      font-size: 24px;
-    }
-    .contact .contact-content .left p {
-      font-size: 14px;
-    }
-    .contact .contact-content .right form .field input,
-    .contact .contact-content .right form .textarea textarea {
-      width: calc(100% - 20px);
-    }
-    .contact .contact-content .right form .button {
-      font-size: 14px;
-    }
-  }
+  /* No hover needed for mobile */
 
 /* Updated Vim Help Box Styles */
 .vim-help {
-  position: fixed;
-  bottom: 30px;
-  left: 30px;
-  background: rgba(249, 249, 249, 0.95); /* Light background */
-  color: #333; /* Dark text for contrast */
-  border-radius: 6px;
-  z-index: 9999;
-  width: 180px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border: 1px solid #e0e0e0;
+  position: fixed; bottom: 20px; left: 20px; /* Adjusted position */
+  background: rgba(249, 249, 249, 0.95); color: #333;
+  border-radius: 6px; z-index: 10000; /* Ensure it's above scrollbar button */
+  width: 180px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; border: 1px solid #e0e0e0;
 }
-
-.vim-help.hidden {
-  transform: translateX(-200px);
-}
-
+.vim-help.hidden { transform: translateX(-220px); /* Ensure fully hidden */ }
 .vim-help-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;
-  background: #3883d3; /* Keeping your blue accent color */
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  color: #fff; /* White text for header */
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 12px; background: #3883d3;
+  border-top-left-radius: 6px; border-top-right-radius: 6px;
+  font-family: "Poppins", sans-serif; font-size: 14px; color: #fff;
 }
-
 .vim-help-toggle {
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 12px;
+  background: none; border: none; color: #fff; cursor: pointer;
+  font-size: 16px; /* Larger tap target */ padding: 5px;
+   -webkit-tap-highlight-color: transparent;
 }
-
-.vim-help-content {
-  padding: 10px;
-}
-
-.vim-help-content ul {
-  list-style: none;
-}
-
-.vim-help-content ul li {
-  margin-bottom: 8px;
-  font-size: 13px;
-}
-
+.vim-help-content { padding: 10px; }
+.vim-help-content ul { list-style: none; padding-left: 0; }
+.vim-help-content ul li { margin-bottom: 8px; font-size: 13px; }
 .vim-help-content kbd {
-  background: #e6e6e6; /* Light gray for key backgrounds */
-  border-radius: 3px;
-  padding: 2px 5px;
-  font-family: monospace;
-  font-weight: bold;
-  color: #333; /* Dark text */
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-/* Experience Section Styles */
-.experience {
-  background: url(bn.jpg) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  color: #000;
-}
-.experience .exp-content {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 50px;
-}
-.experience .card {
-  background: rgba(249, 249, 249, 0.9);
-  padding: 30px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-.experience .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-.experience .card .box {
-  display: flex;
-  flex-direction: column;
-}
-.experience .card .company {
-  font-size: 24px;
-  font-weight: 600;
-  color: #3883d3;
-  margin-bottom: 5px;
-}
-.experience .card .position {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.experience .card .duration {
-  font-size: 14px;
-  color: #6e6e6e;
-  margin-bottom: 15px;
-}
-.experience .card ul {
-  margin-left: 20px;
-}
-.experience .card ul li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+  background: #e6e6e6; border-radius: 3px; padding: 2px 5px;
+  font-family: monospace; font-weight: bold; color: #333;
+  border: 1px solid #ccc; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-/* Projects Section Styles */
-.projects {
-  padding: 100px 0;
-}
-.projects .project-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-.projects .card {
-  background: #f9f9f9;
-  padding: 25px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  height: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-.projects .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-.projects .card .box {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.projects .card .project-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #3883d3;
-  margin-bottom: 10px;
-}
-.projects .card .tech-stack {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
-  color: #6e6e6e;
-}
-.projects .card .date {
-  font-size: 14px;
-  color: #6e6e6e;
-  margin-bottom: 15px;
-}
-.projects .card ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-.projects .card ul li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-  font-size: 15px;
-}
-.projects .card .github-link {
-  align-self: flex-start;
-  padding: 8px 16px;
-  background: #3883d3;
-  color: #fff;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: auto;
-}
-.projects .card .github-link:hover {
-  background: #6e6e6e;
-}
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-  .projects .project-content {
-    grid-template-columns: 1fr;
+  /* =============================== */
+  /* === MOBILE OPTIMIZATIONS === */
+  /* =============================== */
+
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .max-width { padding: 0 50px; }
   }
-  .experience .card {
-    padding: 20px;
+
+  @media (max-width: 1080px) {
+    .max-width { padding: 0 40px; }
   }
-  .projects .card {
-    padding: 20px;
+
+  @media (max-width: 991px) {
+    .max-width { padding: 0 30px; }
+    /* Adjust column layouts earlier if needed */
+    .about .about-content .right { margin-left: 30px; }
+    .skills .skills-content .left { margin-right: 30px; }
   }
-  .experience .card .company {
-    font-size: 20px;
+
+  /* --- Major Mobile Breakpoint (Tablets & Large Phones) --- */
+  @media (max-width: 768px) {
+    section {
+        padding: 60px 0; /* Reduce section padding */
+    }
+    .max-width {
+      padding: 0 20px; /* Reduce side padding */
+    }
+    section .title {
+        font-size: 32px; /* Reduce title size */
+        margin-bottom: 40px;
+    }
+     section .title::before {
+        width: 150px; /* Adjust underline */
+    }
+     section .title::after {
+        font-size: 18px; /* Adjust subtitle */
+    }
+
+    /* Navbar Mobile */
+    .navbar { padding: 15px 0; background: #6e6e6e; /* Show background immediately */ }
+    .navbar .menu { display: none; /* Hide desktop menu */ }
+    .navbar .menu-btn { display: block; /* Show hamburger */ z-index: 1000; /* Ensure it's above mobile menu */ }
+    .navbar.active .menu { /* Mobile Menu Styles */
+      display: block; position: fixed; /* Use fixed for full screen */
+      top: 0; left: 0; width: 100%; height: 100vh; /* Full screen */
+      background: rgba(40, 40, 40, 0.98); /* Dark overlay */
+      padding-top: 80px; /* Space for close button */
+      text-align: center;
+      border-top: none; /* Remove border */
+      z-index: 998; /* Below menu button but above content */
+      overflow-y: auto; /* Allow scrolling if needed */
+    }
+    .navbar.active .menu li {
+      width: 100%;
+      margin-bottom: 15px; /* Space out links */
+    }
+    .navbar.active .menu li a {
+      margin-left: 0; display: block;
+      padding: 15px 20px; /* Larger tap area */
+      font-size: 22px; /* Larger font */
+      color: #fff;
+    }
+     .navbar.active .menu li a:hover {
+         color: #3883d3; /* Add hover/active style */
+         background: rgba(255,255,255, 0.1);
+     }
+
+     /* Home section mobile */
+    .home .home-content .text-2 { font-size: 60px; }
+    .home .home-content .text-3,
+    .home .home-content .text-4 { font-size: 32px; }
+
+    /* Stack columns in About, Skills, Contact */
+    .about .about-content,
+    .skills .skills-content,
+    .contact .contact-content {
+        flex-direction: column;
+        align-items: stretch; /* Make columns take full width */
+        margin-top: 40px; /* Reduce top margin */
+        gap: 40px; /* Add consistent gap */
+    }
+    .about .about-content .column.left {
+        text-align: center; /* Center the image */
+        margin-bottom: 20px; /* Space below image */
+    }
+    .about .about-content .column.right,
+    .skills .skills-content .column.left,
+    .contact .contact-content .column.left {
+        margin-left: 0; /* Remove margin when stacked */
+        margin-right: 0; /* Remove margin when stacked */
+        text-align: center; /* Center text content */
+    }
+     .about .about-content .column.right {
+         text-align: left; /* Keep about text left aligned if preferred */
+     }
+     .skills .skills-content .column.right {
+         width: 100%; /* Ensure skill bars take full width */
+     }
+    .contact .contact-content .column.right form {
+        width: 100%; /* Ensure form takes full width */
+    }
+    .contact .contact-content .left .icons {
+        text-align: center; /* Center icons */
+         margin-bottom: 20px; /* Space below icons */
+    }
+     .contact .contact-content .left .icons a {
+         margin: 0 10px; /* Adjust icon spacing */
+     }
+
+    /* Services Cards Full Width */
+    .services .serv-content {
+        margin-top: 40px;
+        gap: 25px; /* Adjust gap */
+    }
+    .services .serv-content .card {
+        flex-basis: 100%; /* Make cards full width */
+    }
+
+    /* Experience Section Mobile */
+    .experience .card { padding: 20px; }
+    .experience .card .company { font-size: 20px; }
+    .experience .card .position { font-size: 16px; }
+
+    /* Projects Section Mobile */
+    .projects { padding: 60px 0; }
+    .projects .project-content {
+        grid-template-columns: 1fr; /* Force single column */
+        margin-top: 40px;
+        gap: 25px;
+    }
+    .projects .card { padding: 20px; }
+    .projects .card .project-title { font-size: 18px; }
+
+    /* Scroll up button adjustment */
+    .scroll-up-btn { right: 20px; bottom: 20px; }
+    .scroll-up-btn.show { bottom: 20px; /* Keep consistent position */}
+
+     /* Remove fixed background attachment for performance */
+     .about, .skills, .contact, .experience {
+         background-attachment: scroll;
+     }
   }
-  .experience .card .position {
-    font-size: 16px;
+
+
+  /* --- Smallest Mobile Breakpoint --- */
+  @media (max-width: 500px) {
+    .max-width { padding: 0 15px; } /* Even less padding */
+     section .title { font-size: 28px; margin-bottom: 30px; }
+      section .title::before { width: 120px; }
+      section .title::after { font-size: 16px; }
+
+    .home .home-content .text-1 { font-size: 22px; }
+    .home .home-content .text-2 { font-size: 45px; }
+    .home .home-content .text-3,
+    .home .home-content .text-4 { font-size: 25px; }
+    .home .home-content a { font-size: 14px; padding: 8px 25px; } /* Smaller button */
+
+    .about .about-content .right .text { font-size: 24px; }
+    .about .about-content .right p { font-size: 15px; } /* Slightly larger minimum */
+    .about .about-content .right .btn { font-size: 14px; }
+
+    .services .serv-content .card .box { flex-direction: column; text-align: center; } /* Stack icon and text */
+    .services .serv-content .card .box i { margin-right: 0; margin-bottom: 10px; font-size: 35px; } /* Center icon */
+    .services .serv-content .card .box .text { font-size: 18px; }
+    .services .serv-content .card .box p { font-size: 15px; }
+
+    .skills .skills-content .text { font-size: 24px; } /* Title within skills section */
+    .skills .skills-content .column.right .bars .info span:first-child { font-size: 16px; }
+    .skills .skills-content .column.right .bars .info span:last-child { font-size: 14px; }
+
+    .skills-hobbies .carousel .card .box { flex-direction: column; text-align: center; } /* Stack icon/text */
+    .skills-hobbies .carousel .card .box i { font-size: 35px; margin-right: 0; margin-bottom: 10px; }
+    .skills-hobbies .carousel .card .box .text { font-size: 18px; margin-left: 0; }
+    .skills-hobbies .carousel .card .box p { font-size: 15px; }
+     .skills-hobbies .carousel .owl-nav { padding: 0; } /* Remove padding if arrows are too close */
+     .skills-hobbies .carousel .owl-nav .owl-prev,
+     .skills-hobbies .carousel .owl-nav .owl-next { padding: 6px 12px; font-size: 16px; } /* Smaller nav buttons */
+
+    .contact .contact-content .left .text { font-size: 24px; }
+    .contact .contact-content .left p { font-size: 15px; }
+    .contact .contact-content .right form .field input,
+    .contact .contact-content .right form .textarea textarea {
+      /* width: calc(100% - 20px);  --- Use width: 100% instead */
+      width: 100%;
+      padding: 10px; /* Adjust padding if needed */
+    }
+    .contact .contact-content .right form .button { font-size: 14px; padding: 10px 30px; }
+    .contact .contact-content .right form .fields.two-cols .field {
+        width: 100%; /* Stack side-by-side fields on smallest screens */
+    }
+
+    .experience .card .company { font-size: 18px; }
+    .experience .card .position { font-size: 15px; }
+     .experience .card ul li { font-size: 14px; }
+
+     .projects .card .project-title { font-size: 17px; }
+      .projects .card ul li { font-size: 14px; }
+      .projects .card .github-link { padding: 8px 16px; font-size: 14px; }
+
+    .vim-help { width: 160px; /* Slightly narrower help box */ bottom: 15px; left: 15px; }
   }
-  .projects .card .project-title {
-    font-size: 18px;
-  }
-}

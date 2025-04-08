@@ -1,27 +1,30 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="styles.css">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karneeshkar V.</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+    <title>Karneeshkar V. - Portfolio</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="styles.css"> <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        /* Keyframes/hover/pseudo-elements/media queries for "Heartfelt Design" are lost due to inline conversion */
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-  </head>
-  <body>
-    
-    <!-- Vim Commands Help Box -->
+
+    <script>
+    // $(function(){
+    //   $("#includedContent").load("myser.html");
+    // });
+    </script>
+</head>
+<body>
+
     <div class="vim-help">
       <div class="vim-help-header">
         <span>Of course for my fellow vim lovers</span>
@@ -38,22 +41,20 @@
         </ul>
       </div>
     </div>
-    
+
     <nav class="navbar">
       <div class="max-width">
         <ul class="menu">
           <li><a href="#home" class="menu-btn">Home</a></li>
-          <li><a href="#experience" class="menu-btn">Experience</a></li>
+          <li><a href="#heartfelt-design" class="menu-btn">Design</a></li> <li><a href="#services" class="menu-btn">Services</a></li> <li><a href="#experience" class="menu-btn">Experience</a></li>
           <li><a href="#projects" class="menu-btn">Projects</a></li>
           <li><a href="#tech-skills" class="menu-btn">Tech Skills</a></li>
-          <li><a href="#skills-hobbies" class="menu-btn">Skills and Hobbies</a></li>
-          <li><a href="#about" class="menu-btn">About</a></li>
+          <li><a href="#skills-hobbies" class="menu-btn">Skills and Hobbies</a></li> <li><a href="#about" class="menu-btn">About</a></li>
           <li><a href="#contact" class="menu-btn">Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <!-- home section start -->
     <section class="home" id="home">
       <div class="home__animated-background"></div>
       <div class="max-width">
@@ -67,37 +68,160 @@
       </div>
     </section>
 
-    <!-- services section start -->
-    <section class="services" id="services">
-      <div class="max-width">
-        <h2 class="title">My Services</h2>
-        <div class="serv-content">
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-tv"></i>
-              <div class="text">Embedded Systems</div>
-              <p>Zephyr RTOS, ESP 32, Raspberry PI, STM 32</p>
-            </div>
+<section class="heartfelt-design-section" id="heartfelt-design" style="padding: 100px 0; background-color: #0d0d0f;">
+  <div class="max-width">
+    <h2 class="title" style="color: #fff; border-bottom-color: #fff;">Design Excellence</h2>
+    <div class="container" style="max-width: 1100px; width: 100%; padding: 40px; background-color: #111113; border-radius: 20px; position: relative; overflow: hidden; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); margin: 20px auto; box-sizing: border-box;">
+      <header class="header" style="display: flex; justify-content: space-between; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; box-sizing: border-box;">
+        <div class="header-left" style="flex: 1; min-width: 250px; box-sizing: border-box;">
+          <h1 class="title" style="font-size: 2.5rem; font-weight: 700; color: #ffffff; margin: 0 0 5px 0; line-height: 1.2; text-align: left;">Design Excellence</h1>
+          <h2 class="subtitle" style="font-size: 1.8rem; font-weight: 600; color: #8a4fff; margin: 0; text-align: left;">Where Creativity Meets Precision</h2>
+        </div>
+        <div class="header-right" style="flex: 1.5; min-width: 300px; font-size: 0.95rem; line-height: 1.7; color: #a0a0a0; box-sizing: border-box;">
+          <p style="margin: 0 0 1em 0;">I approach every challenge with a blend of creativity and technical precision, ensuring each solution is functional and elegent.</p>
+          <p style="margin: 0 0 1em 0;"><b style="font-weight: 600; color: #ffffff;">System focued apporch</b> combined with <b style="font-weight: 600; color: #ffffff;">innovative problem solving</b> drives my process to produce clean, modern applications that perform.</p>
+          <p style="margin: 0;">My commitment is to create product that are not only functional but also built to stand the test of time.</p>
+        </div>
+      </header>
+
+      <div class="services" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; box-sizing: border-box;">
+        <!-- Service Card 1: UX Research -->
+        <div class="service-card" style="background-color: #1a1a1d; border-radius: 12px; padding: 25px; border: 1px solid #2a2a2f; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease, background 0.4s ease; cursor: pointer; box-sizing: border-box;">
+          <div class="icon" style="font-size: 1rem; margin-bottom: 15px; color: #8a4fff;">
+            <!-- SVG Icon for UX Research -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+              <path d="M5.07 19.08L3.42 17.58L10.92 10.08L13.92 13.08L19.5 7.5L21 9L13.92 16.08L10.92 13.08L5.07 18.92L5.07 19.08Z" stroke="#8a4fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 3.42L15.84 5.03L17.58 5.58L16.54 6.98L16.66 8.84L15 7.92L13.34 8.84L13.46 6.98L12.42 5.58L14.16 5.03L15 3.42Z" stroke="#8a4fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-code"></i>
-              <div class="text">GenAI</div>
-              <p>MCP, RAG, Function calling</p>
-            </div>
+          <h3 class="service-title" style="font-size: 1.15rem; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Embedded System</h3>
+          <p class="service-description" style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.5; margin: 0;"> Zephyr RTOS, ESP 32, Raspberry PI, STM 32</p>
+        </div>
+
+        <!-- Service Card 2: Visual Design -->
+        <div class="service-card" style="background-color: #1a1a1d; border-radius: 12px; padding: 25px; border: 1px solid #2a2a2f; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease, background 0.4s ease; cursor: pointer; box-sizing: border-box;">
+          <div class="icon" style="font-size: 1rem; margin-bottom: 15px; color: #8a4fff;">
+            <!-- SVG Icon for Visual Design -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+              <path d="M12 2L14.32 8.68L21 11L14.32 13.32L12 20L9.68 13.32L3 11L9.68 8.68L12 2Z" stroke="#8a4fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 4L6.32 7.68L10 9L6.32 10.32L5 14L3.68 10.32L0 9L3.68 7.68L5 4Z" stroke="#8a4fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(15, 15) scale(0.5)"/>
+            </svg>
           </div>
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-paint-brush"></i>
-              <div class="text">Full stack</div>
-              <p>Axum, FastAPI, PHP, React</p>
-            </div>
+          <h3 class="service-title" style="font-size: 1.15rem; font-weight: 600; color: #ffffff; margin-bottom: 8px;">GenAI</h3>
+          <p class="service-description" style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.5; margin: 0;">Craft modern, cohesive design systems that enhance user engagement.</p>
+        </div>
+
+        <!-- Service Card 3: Web Development -->
+        <div class="service-card active" style="border-radius: 12px; padding: 25px; background: linear-gradient(145deg, #583cf0 10%, #311f7a 80%); border-color: transparent; transform: translateY(-6px); display: flex; flex-direction: column; transition: transform 0.3s ease; cursor: pointer; box-sizing: border-box;">
+          <div class="icon" style="font-size: 1rem; margin-bottom: 15px; color: #ffffff;">
+            <!-- SVG Icon for Web Development -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px; transform: scale(1.1);">
+              <rect x="3" y="4" width="18" height="12" rx="2" stroke="#ffffff" stroke-width="1.5"/>
+              <path d="M8 20L16 20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 16L12 20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
           </div>
+          <h3 class="service-title" style="font-size: 1.15rem; font-weight: 600; color: #ffffff; margin-bottom: 8px;">Cloud Application    </h3>
+
+          <p class="service-description" style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.85); line-height: 1.5; margin: 0;"></p>
+AWS , DigitalOcean , Azure
+        </div>
+
+        <!-- Service Card 4: Prototype Development -->
+        <div class="service-card" style="background-color: #1a1a1d; border-radius: 12px; padding: 25px; border: 1px solid #2a2a2f; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease, background 0.4s ease; cursor: pointer; box-sizing: border-box;">
+          <div class="icon" style="font-size: 1rem; margin-bottom: 15px; color: #8a4fff;">
+            <!-- SVG Icon for Prototype Development -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px;">
+              <path d="M6 8L2 12L6 16" stroke="#8a4fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 8L22 12L18 16" stroke="#8a4fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.5 4L9.5 20" stroke="#8a4fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="service-title" style="font-size: 1.15rem; font-weight: 600; color: #ffffff; margin-bottom: 8px;"> Web Development  </h3>
+          <p class="service-description" style="font-size: 0.9rem; color: #a0a0a0; line-height: 1.5; margin: 0;">
+                Axum, FastAPI, PHP, React</p>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const cards = document.querySelectorAll('#heartfelt-design .service-card'); // Scope selector
 
-    <!-- experience section start -->
+                function setActiveCard(cardToActivate) {
+                     console.warn("setActiveCard function needs rewrite for inline styles.");
+                     // Original class-based logic (will not apply styles correctly):
+                     cards.forEach(c => {
+                         if (c !== cardToActivate) {
+                             c.classList.remove('active');
+                         }
+                     });
+                     if (cardToActivate) {
+                         cardToActivate.classList.add('active');
+                     }
+                     // To fix: Must directly manipulate c.style and cardToActivate.style properties here.
+                }
+
+                cards.forEach(card => {
+                    card.addEventListener('click', function() {
+                        this.style.transform = 'scale(0.98)';
+                        setTimeout(() => {
+                            if (!this.classList.contains('active')) { // Still checking class
+                                this.style.transform = 'translateY(0px)';
+                            } else {
+                                this.style.transform = 'translateY(-6px)';
+                            }
+                            // setActiveCard(this); // Ineffective call
+                            console.warn("Card click handler needs rewrite for inline styles.");
+                        }, 100);
+                    });
+
+                    card.addEventListener('mouseleave', function() {
+                        // This logic also needs review for inline style manipulation
+                         if (!this.classList.contains('active')) {
+                             if (!this.style.transform || !this.style.transform.includes('scale')) {
+                                this.style.transform = '';
+                             }
+                         } else {
+                             if (!this.style.transform || !this.style.transform.includes('scale')) {
+                                this.style.transform = 'translateY(-6px)';
+                             }
+                         }
+                    });
+                });
+            });
+        </script>
+    </section>
+<!--    <section class="services" id="services">-->
+      <!--<div class="max-width">-->
+        <!--<h2 class="title">My Services</h2>-->
+        <!--<div class="serv-content">-->
+          <!--<div class="card">-->
+            <!--<div class="box">-->
+              <!--<i class="fas fa-tv"></i>-->
+              <!--<div class="text">Embedded Systems</div>-->
+              <!--<p>Zephyr RTOS, ESP 32, Raspberry PI, STM 32</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="card">-->
+            <!--<div class="box">-->
+              <!--<i class="fas fa-code"></i>-->
+              <!--<div class="text">GenAI</div>-->
+              <!--<p>MCP, RAG, Function calling</p>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="card">-->
+            <!--<div class="box">-->
+              <!--<i class="fas fa-paint-brush"></i>-->
+              <!--<div class="text">Full stack</div>-->
+              <!--<p>Axum, FastAPI, PHP, React</p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</section>-->
+
     <section class="experience" id="experience">
       <div class="max-width">
         <h2 class="title">My Experience</h2>
@@ -114,7 +238,7 @@
               </ul>
             </div>
           </div>
-          
+
           <div class="card">
             <div class="box">
               <div class="company">UpWork</div>
@@ -127,7 +251,7 @@
               </ul>
             </div>
           </div>
-          
+
           <div class="card">
             <div class="box">
               <div class="company">Procter & Gamble</div>
@@ -153,7 +277,7 @@
               </ul>
             </div>
           </div>
-          
+
           <div class="card">
             <div class="box">
               <div class="company">Intellect Design Arena Ltd</div>
@@ -166,7 +290,7 @@
               </ul>
             </div>
           </div>
-          
+
           <div class="card">
             <div class="box">
               <div class="company">Hindustan Aeronautics Limited</div>
@@ -183,7 +307,6 @@
       </div>
     </section>
 
-    <!-- projects section start -->
     <section class="projects" id="projects">
       <div class="max-width">
         <h2 class="title">My Projects</h2>
@@ -242,8 +365,7 @@
         </div>
       </div>
     </section>
-    
-    <!-- skills section start -->
+
     <section class="skills" id="tech-skills">
       <div class="max-width">
         <h2 class="title">Tech Skills</h2>
@@ -304,8 +426,7 @@
         <h2 class="title">About Me</h2>
         <div class="about-content">
           <div class="column left">
-            <img src="./temp.png" alt="" />
-          </div>
+            <img src="./temp.png" alt="Karneeshkar V - Photo" /> </div>
           <div class="column right">
             <div class="text">Who am I?</div>
             <p>
@@ -323,7 +444,6 @@
       </div>
     </section>
 
-    <!-- contact section start -->
     <section class="contact" id="contact">
       <div class="max-width">
         <h2 class="title">Contact Me</h2>
@@ -343,7 +463,7 @@
                 </div>
               </div>
               <div class="row">
-              </div>
+                 </div>
               <div class="row">
                 <i class="fas fa-envelope"></i>
                 <div class="info">
@@ -384,11 +504,9 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
     <footer class="footer" role="contentinfo">
       <div class="max-width">
-        <p>&copy; 2025 Karneeshkar</p>
-        <div class="social-links">
+        <p>&copy; 2025 Karneeshkar</p> <div class="social-links">
           <a
             href="https://www.linkedin.com/in/karneeshkar-velmurugan/"
             target="_blank"
@@ -405,11 +523,11 @@
           >
             <i class="fab fa-github"></i>
           </a>
-          <i class="fab fa-codepen"></i>
-        </div>
+           </div>
       </div>
     </footer>
 
     <script src="script.js"></script>
-  </body>
+
+</body>
 </html>

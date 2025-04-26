@@ -432,16 +432,108 @@ button:hover {
 
   /* Footer Section Styles */
   .footer {
-    background: #111; /* Slightly darker */
-    color: #aaa; /* Slightly lighter text */
-    padding: 20px 0; /* More padding */
-    font-size: 14px; /* Adjust size */
+    background: #181828;
+    color: #f1f1f1;
+    padding: 48px 0 28px 0;
+    font-size: 20px;
     text-align: center;
+    letter-spacing: 0.02em;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.12);
+    margin-top: 60px;
   }
-   .footer a {
-       color: #fff; /* Make links stand out */
-       text-decoration: underline;
-   }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .footer-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.04em;
+    gap: 4px;
+  }
+  .footer-year {
+    font-size: 1em;
+    font-weight: 400;
+    color: #bdbdbd;
+    margin-top: 2px;
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    align-items: center;
+  }
+  .footer-social-link {
+    color: #fff;
+    background: #22223b;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1em;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    text-decoration: none;
+  }
+  .footer-social-link:hover,
+  .footer-social-link:focus {
+    background: #8a4fff;
+    color: #fff;
+    transform: translateY(-4px) scale(1.08);
+    text-decoration: none;
+  }
+  .footer-tagline {
+    margin-top: 18px;
+    font-size: 1.1em;
+    color: #bdbdbd;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  @media (max-width: 700px) {
+    .footer-main {
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .footer-brand {
+      align-items: center;
+    }
+    .footer-container {
+      padding: 0 10px;
+    }
+    .footer {
+      font-size: 16px;
+      padding: 32px 0 18px 0;
+    }
+    .footer-social-link {
+      width: 44px;
+      height: 44px;
+      font-size: 1.5em;
+    }
+    .footer-tagline {
+      font-size: 1em;
+    }
+  }
 
   /* Experience Section Styles */
   .experience {

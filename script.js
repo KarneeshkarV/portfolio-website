@@ -97,6 +97,43 @@ $(document).ready(function () {
         },
     });
 
+    // --- Tech Skills Animation ---
+    // Animate skill bars when the section is in view
+    function animateSkillBars() {
+        const skillSection = document.getElementById('tech-skills');
+        if (!skillSection) return;
+        const bars = document.querySelectorAll('.skills .skills-content .column.right .bars .line');
+        const sectionTop = skillSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (sectionTop < windowHeight - 100) {
+            bars.forEach(bar => {
+                bar.classList.add('animated');
+            });
+            window.removeEventListener('scroll', animateSkillBars);
+        }
+    }
+    window.addEventListener('scroll', animateSkillBars);
+    // Also trigger on load in case already in view
+    animateSkillBars();
+
+    // --- Timeline Animation ---
+    // Animate timeline items when they come into view
+    function animateTimeline() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        timelineItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < windowHeight - 100) {
+                item.classList.add('timeline-animate--visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', animateTimeline);
+    // Also trigger on load in case already in view
+    animateTimeline();
+
     // --- Vim Navigation --- 
     const scrollAmount = 700; // Increased from 100 to 250 pixels for faster scrolling
     const ggTimeout = 500; // Milliseconds for gg detection

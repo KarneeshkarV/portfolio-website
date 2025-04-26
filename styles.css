@@ -323,16 +323,24 @@ button:hover {
   .skills .skills-content .column.right .bars .info span:first-child { font-size: 18px; font-weight: 500; color: #6e6e6e; }
   .skills .skills-content .column.right .bars .info span:last-child { font-size: 16px; font-weight: 400; color: #3883d3; }
   .skills .skills-content .column.right .bars .line { height: 8px; width: 100%; background: #f1f1f1; border-radius: 8px; position: relative; overflow: hidden; /* Ensure ::before stays inside */ }
-  .skills .skills-content .column.right .bars .line::before {
-    content: ""; position: absolute; left: 0; bottom: 0;
-    height: 100%; background: #3883d3; border-radius: 8px;
-    /* Widths defined below */
-  }
-  .skills .skills-content .column.right .bars .line.java::before { width: 90%; }
-  .skills .skills-content .column.right .bars .line.python::before { width: 85%; }
-  .skills .skills-content .column.right .bars .line.javascript::before { width: 80%; }
-  .skills .skills-content .column.right .bars .line.react::before { width: 75%; }
-  .skills .skills-content .column.right .bars .line.nodejs::before { width: 70%; }
+.skills .skills-content .column.right .bars .line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background: #3883d3;
+    border-radius: 8px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Animated widths for each skill */
+.skills .skills-content .column.right .bars .line.java.animated::before { width: 90%; }
+.skills .skills-content .column.right .bars .line.python.animated::before { width: 85%; }
+.skills .skills-content .column.right .bars .line.javascript.animated::before { width: 80%; }
+.skills .skills-content .column.right .bars .line.react.animated::before { width: 75%; }
+.skills .skills-content .column.right .bars .line.nodejs.animated::before { width: 70%; }
 
   /* Skills & Hobbies Section Styles */
   /* Assuming Owl Carousel handles responsiveness - Styles focus on appearance */
@@ -542,6 +550,7 @@ button:hover {
     background-attachment: fixed; /* Consider removing for mobile */
     color: #000;
   }
+<<<<<<< HEAD
   .experience .exp-content {
     display: flex; flex-direction: column;
     gap: 30px; margin-top: 50px;
@@ -559,6 +568,78 @@ button:hover {
   .experience .card .duration { font-size: 14px; color: #6e6e6e; margin-bottom: 15px; }
   .experience .card ul { margin-left: 20px; padding-left: 0; /* Remove default padding if margin is used */ list-style: disc; /* Ensure bullets show */ }
   .experience .card ul li { margin-bottom: 10px; /* More space */ line-height: 1.6; font-size: 15px; /* Ensure readable */ }
+=======
+  /* Timeline Styles */
+  .timeline {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 3px solid #8a4fff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1), transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: opacity, transform;
+  }
+  .timeline-item.timeline-animate--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .timeline-marker {
+    position: absolute;
+    left: -44px;
+    top: 24px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border: 4px solid #8a4fff;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(138, 79, 255, 0.15);
+  }
+  .timeline-content {
+    margin-left: 20px;
+    flex: 1;
+  }
+  .experience .card {
+    background: rgba(249, 249, 249, 0.95); /* Slightly more opaque */
+    padding: 25px; border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* Add animation for timeline */
+  }
+  .experience .card .box { display: flex; flex-direction: column; }
+  .experience .card .company { font-size: 24px; font-weight: 600; color: #3883d3; margin-bottom: 5px; }
+  .experience .card .position { font-size: 18px; font-weight: 500; margin-bottom: 5px; }
+  .experience .card .duration { font-size: 14px; color: #6e6e6e; margin-bottom: 15px; }
+  .experience .card ul { margin-left: 20px; padding-left: 0; list-style: disc; }
+  .experience .card ul li { margin-bottom: 10px; line-height: 1.6; font-size: 15px; }
+
+  @media (max-width: 768px) {
+    .timeline {
+      margin-left: 0;
+      padding-left: 15px;
+      border-left-width: 2px;
+    }
+    .timeline-marker {
+      left: -28px;
+      width: 16px;
+      height: 16px;
+      border-width: 3px;
+      top: 18px;
+    }
+    .timeline-content {
+      margin-left: 10px;
+    }
+  }
+>>>>>>> Snippet
 
   /* Projects Section Styles */
   .projects { padding: 100px 0; } /* Adjust padding on mobile */
@@ -591,6 +672,18 @@ button:hover {
      -webkit-tap-highlight-color: transparent;
   }
   /* No hover needed for mobile */
+
+/* Card Animation */
+.card-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1), transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform;
+}
+.card-animate.card-animate--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Updated Vim Help Box Styles */
 .vim-help {

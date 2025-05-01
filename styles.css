@@ -917,3 +917,32 @@ button:hover {
 
     .vim-help { width: 160px; /* Slightly narrower help box */ bottom: 15px; left: 15px; }
   }
+.ball {
+  width: 50px; /* Slightly smaller than example */
+  height: 50px;/* Slightly smaller than example */
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none; /* Important: Allows interaction with elements underneath */
+  backdrop-filter: invert(1) grayscale(1);
+  -webkit-backdrop-filter: invert(1) grayscale(1); /* Safari/Chrome */
+  z-index: 99999; /* Ensure it's above most other content */
+  /* Note: May need adjustment if you have elements with higher z-index */
+}
+
+
+/* =============================== */
+/* === MOBILE OPTIMIZATIONS === */
+/* =============================== */
+
+/* ... existing media queries ... */
+
+/* Hide the ball on touch devices / smaller screens where cursor is less relevant */
+@media (max-width: 768px) {
+    /* ... other mobile styles ... */
+
+    .ball {
+        display: none;
+    }
+}

@@ -243,4 +243,48 @@ $(document).ready(function () {
         colonPressed = false;
     });
     // --- End Vim Navigation --- 
+if (typeof gsap !== 'undefined') {
+        gsap.set(".ball", { xPercent: -50, yPercent: -50 });
+
+        const ball = document.querySelector(".ball");
+        // Initialize position slightly off-screen or at center until first move
+        const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+        const mouse = { x: pos.x, y: pos.y };
+        const speed = 0.08; // Adjust speed for desired follow delay (lower = slower)
+
+        const xSet = gsap.quickSetter(ball, "x", "px");
+        const ySet = gsap.quickSetter(ball, "y", "px");
+
+        window.addEventListener("mousemove", (e) => {
+            mouse.x = e.clientX; // Use clientX/clientY for viewport coordinates
+            mouse.y = e.clientY;
+        });
+
+        gsap.ticker.add(() => {
+            // Adjust speed based on deltaTime for smoother animation
+            const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+
+            pos.x += (mouse.x - pos.x) * dt;
+            pos.y += (mouse.y - pos.y) * dt;
+
+            xSet(pos.x);
+            ySet(pos.y);
+        });
+
+        // Optional: Hide cursor when hovering over links/buttons if desired
+        // Select interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, kbd, .menu-btn, .vim-help-toggle, .scroll-up-btn');
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                gsap.to(ball, { duration: 0.2, scale: 1.3, autoAlpha: 0.7 }); // Example: Grow slightly
+            });
+            el.addEventListener('mouseleave', () => {
+                gsap.to(ball, { duration: 0.2, scale: 1, autoAlpha: 1 }); // Return to normal
+            });
+        });
+
+    } else {
+        console.error("GSAP library not loaded. Mouse trail effect requires GSAP.");
+    }
 });

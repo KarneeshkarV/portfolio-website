@@ -243,7 +243,55 @@ button:hover {
      -webkit-tap-highlight-color: transparent;
   }
   .home .home-content a:hover { background: #555; color: #fff; border-color: #555; }
+/* Arrow Styles - Added for Home Section */
+.home .home-content .arrow { /* Scope to home section */
+  position: relative; /* Keep relative for point positioning */
+  margin: 15px auto 25px auto; /* Add vertical margin, keep centered horizontally */
+  width: 200px; /* Adjust width for centering */
+  height: 70px; /* Adjust height based on curve */
+  /* border: 1px dashed red; */ /* Debugging border */
+}
 
+.home .home-content .arrow .curve {
+  border: 2px solid #555; /* Use site color (dark grey), adjust thickness */
+  border-color: transparent transparent transparent #555; /* Keep the trick */
+  height: 70px;  /* Scaled down height */
+  width: 200px; /* Scaled down width */
+  border-radius: 80px 0 0 50px; /* Scaled down radius, adjusted for look */
+  position: absolute; /* Position within .arrow container */
+  top: 0;
+  left: 0;
+}
+
+.home .home-content .arrow .point {
+  position: absolute;
+  left: 8px; /* Adjust based on new curve shape/size */
+  top: 56px; /* Adjust based on new curve shape/size */
+  width: 8px; /* Give it a small base */
+  height: 8px; /* Give it a small base */
+  /* border: 1px dashed blue; */ /* Debugging border */
+}
+
+.home .home-content .arrow .point:before,
+.home .home-content .arrow .point:after {
+  border: 1px solid #555; /* Use site color */
+  height: 12px; /* Scaled down arrow leg height */
+  content: "";
+  position: absolute;
+  background-color: #555; /* Fill the arrowhead */
+}
+
+.home .home-content .arrow .point:before {
+  top: -3px; /* Adjust position */
+  left: -6px; /* Adjust position */
+  transform: rotate(-74deg);
+}
+
+.home .home-content .arrow .point:after {
+  top: -4px; /* Adjust position */
+  left: 3px;  /* Adjust position */
+  transform: rotate(12deg);
+}
   /* About Section Styles */
   .about {
     background: url(bn.jpg) no-repeat center;

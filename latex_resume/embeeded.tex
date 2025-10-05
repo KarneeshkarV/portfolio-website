@@ -1,0 +1,223 @@
+%--------------------------------------------------
+% Resume in LaTeX – Karneeshkar V
+% Template adapted from: https://github.com/sb2nov/resume
+% License: MIT
+%--------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%------------- Page Geometry -----------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%------------- Section Heading ---------------------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine-readable / ATS parsable
+\pdfgentounicode=1
+
+%------------- Custom Commands ---------------------
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%===================================================
+%%%%%%             RESUME STARTS               %%%%%%
+%===================================================
+
+\begin{document}
+
+%------------------ NAME & CONTACT -----------------
+\begin{center}
+  \textbf{\Huge \scshape Karneeshkar V} \\ \vspace{1pt}
+  \small +91 99109 77193 $|$ 
+  \href{mailto:karneeshkar68@gmail.com}{\underline{karneeshkar68@gmail.com}} $|$
+  \href{https://www.linkedin.com/in/karneeshkar-velmurugan/}{\underline{linkedin.com/in/karneeshkar-velmurugan}} $|$
+  \href{https://github.com/KarneeshkarV}{\underline{github.com/KarneeshkarV}} 
+\newline \newline
+\href{https://karneeshkar.tech/}{\underline{Portfolio}  }$|$
+\href{https://www.karneeshkar.tech/#terminal}{\underline{Terminal portfolio}}
+\end{center}
+
+%------------------ SUMMARY ------------------------
+\section{Professional Summary}
+Embedded software engineer with 2+ years of hands-on experience delivering real-time IoT and automotive solutions from prototype to production. Proficient in C/C++, Rust and Python on Zephyr RTOS, QNX/Linux, ESP32 and STM32, with proven use of LoRaWAN, MQTT and automotive diagnostic protocols for connected systems. Skilled in edge AI, sensor fusion and performance optimization for high-availability embedded platforms.
+
+%------------------ TECHNICAL SKILLS ---------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Rust, C/C++, Python, Bash} \\
+    \textbf{Embedded \& IoT}{: Zephyr RTOS, Espressif IDF, STM32, ESP32, Arduino, Raspberry Pi, LoRaWAN, MQTT} \\
+    \textbf{AI \& Data}{: PyTorch, TensorFlow, Computer Vision, Sensor Data Processing} \\
+     \textbf{Microcontrollers \& Tools}{: ESP32, Pi Pico, JTAG, STM32} \\
+          \textbf{Soft skills}{: Communication, Teamwork, Active listening, Problem solving, Critical thinking, Time management}}}
+\end{itemize}
+
+%------------------ EXPERIENCE ---------------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Tech Lead}{Jun 2025 –  Current}
+    {2Cents Capital}{Bengaluru, India}
+    \resumeItemListStart
+      \resumeItem{Led and scaled cross-functional Mobile and AI teams (10+ engineers) to deliver high-impact features with 95\% on-time release rate.}
+      \resumeItem{Published a fully responsive investment application on both iOS App Store and Google Play, achieving $<$0.5s cold-start time.}
+      \resumeItem{Designed and deployed AI agents across the end-to-end customer journey—including customer support, onboarding, and market research—improving support resolution speed by 40\% and reducing manual intervention costs by 30\%.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+     {Software Developer}{Jan 2025--Jun 2025}
+     {Visteon}{Chennai, India}
+    \resumeItemListStart
+      \resumeItem{Created diagnostic routines for JLR platforms that detect system anomalies with \(96\%\) accuracy, boosting vehicle reliability.}
+      \resumeItem{Optimized real-time dashboard software (SomeIP on QNX/Linux) in C, reducing processing latency by \(25\%\).}
+      \resumeItem{Wrote unit and functional tests to reach \(99.8\%\) code coverage across the code-base with zero deviations.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Automation Intern}{Dec 2024--Jan 2025}
+    {Procter \& Gamble}{Hyderabad, India}
+    \resumeItemListStart
+      \resumeItem{Implemented IIoT monitoring on five production lines, ingesting \(2\text{M}+\) data points daily with \(99.9\%\) uptime.}
+      \resumeItem{Automated quality-control workflows, cutting manual inspection time \(40\%\) and improving defect detection \(15\%\).}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {IoT \& LoRaWAN Developer}{May 2024--Jun 2024}
+    {Tynatech Ingenious Pvt Ltd}{Noida, India}
+    \resumeItemListStart
+      \resumeItem{Built RESTful APIs/webhooks connecting \(50+\) LoRaWAN devices to cloud platforms.}
+      \resumeItem{Optimized UART–LoRaWAN interface to raise throughput \(30\%\) via efficient buffer management.}
+      \resumeItem{Added MQTT streaming for real-time gateway visualization, handling \(100+\) msgs s\(^{-1}\).}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Web Development Intern}{Oct 2023--Dec 2023}
+    {Intellect Design Arena}{Chennai, India}
+    \resumeItemListStart
+      \resumeItem{Developed PHP-based financial portals with \(30\%\) faster page loads.}
+      \resumeItem{Managed cloud infrastructure for five web apps, configuring auto-scaling for \(99.9\%\) availability.}
+      \resumeItem{Created analytics dashboards delivering real-time engagement and conversion insights.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {R\&D Intern}{Aug 2023--Sep 2023}
+    {Hindustan Aeronautics Ltd (HAL)}{Bangalore, India}
+    \resumeItemListStart
+      \resumeItem{Optimized autopilot algorithms, cutting computational overhead \(22\%\) while meeting safety constraints.}
+      \resumeItem{Authored C++ simulation tool covering \(200+\) control-system test scenarios.}
+      \resumeItem{Assisted avionics teams with system documentation and verification protocols.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%------------------ PROJECTS -----------------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+
+  \resumeProjectHeading
+    {\textbf{Multipurpose VR Gloves with Gesture Recognition}
+      \( | \) \emph{Unity, C\#, ESP32, ML}}{Sep 2024}
+    \resumeItemListStart
+      \resumeItem{Built VR gloves capturing \(15+\) gestures at \(92\%\) accuracy using flex-sensor ML pipelines.}
+      \resumeItem{Developed web UI for mapping gestures to \(20+\) system commands; integrated Unity for gaming/assistive control.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Embedded Athlete-Performance Monitoring System}
+      \( | \) \emph{ESP32, PyTorch, OpenCV}}{Mar 2024}
+    \resumeItemListStart
+      \resumeItem{Ran edge CV on ESP32 to analyze runner form in real-time; fused MPU6050, VO\(_2\), temperature data.}
+      \resumeItem{Implemented decision-tree classifier for actionable feedback via Flask/Plotly dashboard.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Smart Rhesus Macaque Deterrent System}
+      \( | \) \emph{Jetson Nano, CV, Ultrasonic}}{Mar 2024}
+    \resumeItemListStart
+      \resumeItem{Achieved \(94\%\) macaque detection in varied lighting; ultrasonic emitters cut intrusions \(90\%\).}
+      \resumeItem{Power-management module lowered energy use \(35\%\) for solar deployment.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Wearable Jump-Height Measurement Device}
+      \( | \) \emph{ESP32, MPU6050, Flask}}{Mar 2024}
+    \resumeItemListStart
+      \resumeItem{Ankle-mounted sensor reached \(\pm1\,\text{cm}\) accuracy vs lab force-plates.}
+      \resumeItem{Used Kalman filtering to suppress sensor noise \(80\%\); built SQLite/Flask analytics dashboard.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{RFID-based Runner Tracking System}
+      \( | \) \emph{Industrial RFID, PHP, Raspberry Pi}}{Dec 2023}
+    \resumeItemListStart
+      \resumeItem{Automated timing for \(5\,\text{km}\) training runs via industrial RFID readers.}
+      \resumeItem{Web interface enabled seamless record management and legacy-system integration.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%------------------ EDUCATION ----------------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Vellore Institute of Technology}{Chennai, India}
+    {B.Tech. Electronics \& Computer Engineering; GPA: 8.66/10}{2021--2025}
+\resumeSubHeadingListEnd
+
+%--------------------------------------------------
+\end{document}

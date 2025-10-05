@@ -330,3 +330,41 @@ $(document).ready(function () {
     allCards.forEach((card) => observer.observe(card));
   });
 });
+
+// Terminal copy function
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    // Show a brief success message
+    const btn = event.target.closest('.copy-btn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+    btn.style.backgroundColor = '#28ca42';
+
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.backgroundColor = '#8a4fff';
+    }, 2000);
+  }).catch(function(err) {
+    console.error('Failed to copy: ', err);
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      const btn = event.target.closest('.copy-btn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+      btn.style.backgroundColor = '#28ca42';
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.backgroundColor = '#8a4fff';
+      }, 2000);
+    } catch (err) {
+      console.error('Fallback copy failed: ', err);
+    }
+    document.body.removeChild(textArea);
+  });
+}

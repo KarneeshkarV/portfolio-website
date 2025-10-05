@@ -56,6 +56,7 @@
           </li>
           <li><a href="#about" class="menu-btn">About</a></li>
           <li><a href="#contact" class="menu-btn">Contact</a></li>
+          <li><a href="#terminal" class="menu-btn">Terminal</a></li>
         </ul>
       </div>
     </nav>
@@ -876,6 +877,60 @@
         </div>
       </div>
     </section>
+    <section class="terminal" id="terminal">
+      <div class="max-width">
+        <div class="terminal-heading">
+          <h2 class="title">Terminal Access</h2>
+          <p class="terminal-subtitle">
+            Visit My Termainl Portfolio using SSH
+          </p>
+        </div>
+        <div class="terminal-content">
+          <div class="terminal-shell">
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-buttons">
+                  <span class="terminal-button close"></span>
+                  <span class="terminal-button minimize"></span>
+                  <span class="terminal-button maximize"></span>
+                </div>
+                <div class="terminal-title">
+                  <span class="terminal-title__icon"></span>
+                  SSH Terminal
+                </div>
+                <div class="terminal-status">
+                  <span class="terminal-status-dot"></span>
+                  Ready
+                </div>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line">
+                  <span class="terminal-prompt">karneeshkar@portfolio</span>
+                  <span class="terminal-symbol">~</span>
+                  <span class="terminal-symbol">$</span>
+                  <span class="terminal-command">ssh tuiuser@ssh.123343.xyz -p 2222</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="terminal-instructions">
+            <h3>How to use</h3>
+            <p class="terminal-instructions__lead">
+              Launch the remote TUI in three simple steps.
+            </p>
+            <ol>
+              <li>Open your preferred terminal or command prompt</li>
+              <li>Copy and paste the command shown in the window</li>
+              <li>Press Enter and follow on-screen prompts and press yes</li>
+            </ol>
+            <button class="copy-btn" onclick="copyToClipboard('ssh tuiuser@ssh.123343.xyz -p 2222')">
+              <i class="fas fa-copy"></i> Copy Command
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="contact" id="contact">
       <div class="max-width">

@@ -1236,3 +1236,177 @@ button {
 button:hover {
   background-color: #6e6e6e;
 }
+
+/* Terminal section styles */
+.terminal {
+  background-color: #0d0d0f;
+  color: #fff;
+}
+
+.terminal .title {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.terminal .title::after {
+  background: #0d0d0f;
+  color: #8a4fff;
+}
+
+.terminal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.terminal-window {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+}
+
+.terminal-header {
+  background-color: #2d2d2d;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-button.close {
+  background-color: #ff5f57;
+}
+
+.terminal-button.minimize {
+  background-color: #ffbd2e;
+}
+
+.terminal-button.maximize {
+  background-color: #28ca42;
+}
+
+.terminal-title {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: #000;
+  color: #00ff00;
+  position: relative;
+  min-height: 100px;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-prompt {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.terminal-command {
+  color: #fff;
+  font-family: inherit;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  color: #00ff00;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.terminal-instructions {
+  background-color: #1a1a1d;
+  border-radius: 8px;
+  padding: 25px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-instructions h3 {
+  color: #8a4fff;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.terminal-instructions ol {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.terminal-instructions li {
+  color: #a0a0a0;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.copy-btn {
+  background-color: #8a4fff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.copy-btn:hover {
+  background-color: #6a3fb8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(138, 79, 255, 0.3);
+}
+
+.copy-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .terminal-content {
+    padding: 0 20px;
+  }
+
+  .terminal-window {
+    max-width: 100%;
+  }
+
+  .terminal-instructions {
+    max-width: 100%;
+  }
+}

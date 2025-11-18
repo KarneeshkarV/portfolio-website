@@ -1,0 +1,226 @@
+%--------------------------------------------------
+% Resume in LaTeX – Karneeshkar V
+% Template adapted from: https://github.com/sb2nov/resume
+% License: MIT
+%--------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%------------- Page Geometry -----------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%------------- Section Heading ---------------------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine-readable / ATS parsable
+\pdfgentounicode=1
+
+%------------- Custom Commands ---------------------
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%===================================================
+%%%%%%             RESUME STARTS               %%%%%%
+%===================================================
+
+\begin{document}
+
+%------------------ NAME & CONTACT -----------------
+\begin{center}
+  \textbf{\Huge \scshape Karneeshkar V} \\ \vspace{1pt}
+  \small +91 99109 77193 $|$ 
+  \href{mailto:karneeshkar68@gmail.com}{\underline{karneeshkar68@gmail.com}} $|$
+  \href{https://www.linkedin.com/in/karneeshkar-velmurugan/}{\underline{linkedin.com/in/karneeshkar-velmurugan}} $|$
+  \href{https://github.com/KarneeshkarV}{\underline{github.com/KarneeshkarV}} 
+\newline \newline
+\href{https://karneeshkar.tech/}{\underline{Portfolio}  }$|$
+\href{https://www.karneeshkar.tech/#terminal}{\underline{Terminal portfolio}}
+\end{center}
+
+%------------------ SUMMARY ------------------------
+\section{Professional Summary}
+Mobile developer specializing in React Native, with proven experience shipping high‑performance cross‑platform apps to iOS App Store and Google Play. Expert in TypeScript/JavaScript, mobile architecture patterns, and optimization techniques. Strong track record of leading mobile teams, delivering production apps with sub‑second cold‑start times, and integrating native modules for platform‑specific features.
+
+%------------------ TECHNICAL SKILLS ---------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Mobile}{: React Native, Expo, TypeScript, JavaScript, React, React Navigation, Native Modules} \\
+    \textbf{State \& Data}{: Redux, Zustand, React Query, AsyncStorage, MMKV, SQLite, PostgreSQL, REST APIs} \\
+    \textbf{Testing \& Quality}{: Jest, React Native Testing Library, Detox, ESLint, TypeScript} \\
+    \textbf{Deployment \& DevOps}{: App Store Connect, Google Play Console, Fastlane, EAS, GitHub Actions, AWS, Docker}\\
+    \textbf{Performance}{: Metro bundler optimization, Code splitting, Image optimization, Native bridge profiling}\\
+              \textbf{Leadership}{: Cross‑functional team coordination, Agile/Scrum, Technical mentorship, Code reviews} }}
+  }}
+\end{itemize}
+
+%------------------ EXPERIENCE ---------------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Mobile Tech Lead (React Native)}{Jun 2025 –  Current}
+    {2Cents Capital}{Bengaluru, India}
+    \resumeItemListStart
+      \resumeItem{Architected and led development of React Native investment app from ground up, shipping to 10,000+ users on iOS and Android with 95\% on-time feature delivery across 10+ engineers.}
+      \resumeItem{Optimized app performance achieving $<$0.5s cold-start time through code splitting, lazy loading, and Metro bundler configuration; reduced bundle size 40\% via tree-shaking and native module integration.}
+      \resumeItem{Implemented CI/CD pipeline with Fastlane and GitHub Actions, automating builds, testing, and deployments to TestFlight/Play Console, reducing release cycle from 2 days to 2 hours.}
+      \resumeItem{Integrated native modules for biometric authentication, secure storage, and push notifications; built custom bridge for seamless iOS/Android financial SDKs integration.}
+      \resumeItem{Established mobile development best practices including TypeScript migration, Jest/Detox testing suite (85\% coverage), and component library achieving 99.9\% crash-free rate.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+     {Embedded Software Developer}{Jan 2025–Jun 2025}
+     {Visteon}{Chennai, India}
+    \resumeItemListStart
+      \resumeItem{Optimized real-time UI rendering and data processing for automotive dashboards, reducing frame drops 25\% through efficient memory management and event-loop optimization—directly applicable to mobile performance tuning.}
+      \resumeItem{Implemented comprehensive test automation achieving 99.8\% code coverage with unit and integration tests; established quality gates preventing regressions in production builds.}
+      \resumeItem{Built diagnostic monitoring system processing 1000+ events/second with sub-10ms latency, demonstrating expertise in performance-critical applications.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Automation Intern}{Dec 2024–Jan 2025}
+    {Procter \& Gamble}{Hyderabad, India}
+    \resumeItemListStart
+      \resumeItem{Built real-time monitoring dashboards processing 2M+ data points daily with 99.9\% uptime, applying responsive design patterns and efficient data visualization techniques.}
+      \resumeItem{Developed automated workflows and data-driven interfaces, reducing manual processes 40\% through intuitive UI/UX design.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {IoT \& LoRaWAN Developer}{May 2024–Jun 2024}
+    {Tynatech Ingenious Pvt Ltd}{Noida, India}
+    \resumeItemListStart
+      \resumeItem{Architected RESTful APIs and webhook integrations connecting 50+ IoT devices to cloud platforms, providing robust backend services for mobile/web clients.}
+      \resumeItem{Implemented real-time WebSocket/MQTT streaming handling 100+ messages/second, enabling live data visualization in frontend applications.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Full Stack Developer Intern}{Oct 2023–Dec 2023}
+    {Intellect Design Arena}{Chennai, India}
+    \resumeItemListStart
+      \resumeItem{Optimized web application performance achieving 30\% faster page loads through code splitting, lazy loading, and asset optimization techniques.}
+      \resumeItem{Built responsive analytics dashboards with real-time data updates, applying mobile-first design principles for seamless cross-device experience.}
+      \resumeItem{Managed cloud deployment and CI/CD pipelines for five applications, ensuring 99.9\% availability through automated testing and monitoring.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%------------------ PROJECTS -----------------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {\textbf{Full‑Stack AI Personal Assistant}
+    \( | \) \emph{Go, Google A2A, PostgreSQL, React}}
+    {Dec 2024}
+\resumeItemListStart
+      \resumeItem{Engineered and deployed a cloud assistant that centralizes and automates personal workflows.}
+      \resumeItem{Built asynchronous agents to orchestrate complex Google Workspace operations (mail, calendar, docs).}
+      \resumeItem{Modeled a personal knowledge graph to ground answers and personalize actions.}
+    \resumeItemListEnd
+  \resumeProjectHeading
+    {\textbf{Instagram Automation Bot}
+      \( | \) \emph{Python, FastAPI, Redis, AWS}}{Dec 2024}
+    \resumeItemListStart
+      \resumeItem{Deployed cloud bot handling 1000+ daily interactions with 99.5\% uptime.}
+      \resumeItem{Added LLM‑based sentiment/intent detection achieving 88\% accuracy in production.}
+      \resumeItem{Introduced Redis caching to cut Meta Graph API calls 65\%; p50 response <500\,ms.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Multipurpose VR Gloves with Gesture Recognition}
+      \( | \) \emph{Unity, C\#, ESP32, ML}}{Sep 2024}
+    \resumeItemListStart
+      \resumeItem{Built VR gloves capturing 15+ gestures at 92\% accuracy using flex‑sensor ML pipelines.}
+      \resumeItem{Developed a web UI to map gestures to 20+ system commands; integrated Unity for gaming/assistive control.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{RAK Gateway Configurator}
+      \( | \) \emph{Python, Flask, SQL, Bash}}{Jun 2024}
+    \resumeItemListStart
+      \resumeItem{Created full-stack tool streamlining configuration of RAKwireless LoRaWAN gateways for network admins.}
+      \resumeItem{Automated device discovery, credential management, and firmware upgrades.}
+    \resumeItemListEnd
+
+
+  \resumeProjectHeading
+    {\textbf{Wearable Jump-Height Measurement Device}
+      \( | \) \emph{ESP32, MPU6050, Flask}}{Mar 2024}
+    \resumeItemListStart
+      \resumeItem{Ankle‑mounted sensor reached \(\pm1\,\text{cm}\) accuracy vs lab force‑plates.}
+      \resumeItem{Used Kalman filtering to suppress sensor noise 80\%; built SQLite/Flask analytics dashboard.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{RFID-based Runner Tracking System}
+      \( | \) \emph{Industrial RFID, PHP, Raspberry Pi}}{Dec 2023}
+    \resumeItemListStart
+      \resumeItem{Automated timing for 5km training runs via industrial RFID readers.}
+      \resumeItem{Web interface enabled seamless record management and legacy-system integration.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%------------------ EDUCATION ----------------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Vellore Institute of Technology}{Chennai, India}
+    {B.Tech. Electronics \& Computer Engineering; GPA: 8.66/10}{2021–2025}
+\resumeSubHeadingListEnd
+
+%--------------------------------------------------
+\end{document}3

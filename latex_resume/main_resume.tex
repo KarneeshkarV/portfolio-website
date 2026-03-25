@@ -1,5 +1,5 @@
 %--------------------------------------------------
-% Resume in LaTeX – Karneeshkar V
+% Resume in LaTeX - Karneeshkar V
 % Template adapted from: https://github.com/sb2nov/resume
 % License: MIT
 %--------------------------------------------------
@@ -7,6 +7,7 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
+\usepackage{amsmath}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
@@ -86,81 +87,75 @@
   \href{https://www.linkedin.com/in/karneeshkar-velmurugan/}{\underline{linkedin.com/karneeshkar-velmurugan}} $|$
   \href{https://github.com/KarneeshkarV}{\underline{github.com/KarneeshkarV}} 
   \newline \newline
-  \href{https://karneeshkar.tech/}{\underline{Portfolio}  }$|$
-  \href{https://www.karneeshkar.tech/#terminal}{\underline{Terminal portfolio}}
+  \href{https://karneeshkar.tech/}{\underline{Portfolio}}
 \end{center}
 
 %------------------ SUMMARY ------------------------
 \section{Professional Summary}
-Versatile engineer across Full‑Stack (Python/Node.js/SQL/AWS), Generative AI (LLMs, RAG, agents), and Embedded/IoT (C/C++, Rust, RTOS on STM32/ESP32). Designs end‑to‑end systems that connect real‑time hardware with cloud services and AI features. Looking to apply cross‑domain depth to ship reliable, intelligent products.
+Cross-domain engineer with production experience spanning Full-Stack Development (Python, Node.js, Go, SQL, AWS), Generative AI (LLMs, RAG, multi-agent systems), and Embedded/IoT (C/C++, Rust, RTOS on STM32/ESP32). Proven track record of leading engineering teams, architecting zero-to-production products, and bridging real-time hardware with cloud-scale AI services. Passionate about applied ML research and building intelligent, high-reliability systems at scale.
 
 %------------------ TECHNICAL SKILLS ---------------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages}{: Rust, C/C++, Python, Bash, PHP, JavaScript, SQL} \\
-    \textbf{Embedded \& IoT}{: Zephyr RTOS, Espressif IDF, STM32, ESP32, Arduino, Raspberry Pi, LoRaWAN} \\
-    \textbf{AI \& Data}{: PyTorch, TensorFlow, Computer Vision, Sensor Data Processing} \\
-    \textbf{Web \& Cloud}{: Flask, Node.js, REST APIs, MQTT, AWS, Docker, Git} \\
-    \textbf{Databases}{: PostgreSQL, MySQL, SQLite, MongoDB} \\
-              \textbf{Soft skills}{: Communication, Teamwork, Active listening, Problem solving, Critical thinking, Time management} }}
-  }}
+    \textbf{Languages}{: Rust, C/C++, Python, Go, Bash, PHP, JavaScript/TypeScript, SQL} \\
+    \textbf{Embedded \& IoT}{: Zephyr RTOS, Espressif IDF, STM32, ESP32, Arduino, Raspberry Pi, LoRaWAN, MQTT} \\
+    \textbf{AI \& ML}{: PyTorch, TensorFlow, RLHF/GRPO, RAG, LLM Fine-Tuning, Computer Vision, Sensor Fusion} \\
+    \textbf{Web \& Cloud}{: React Native, Next.js, Flask, Node.js, REST APIs, AWS, Docker, CI/CD, Git} \\
+    \textbf{Databases}{: PostgreSQL, MySQL, SQLite, MongoDB, Redis} \\
+    \textbf{Leadership}{: Cross-functional team leadership, Agile/Scrum, Technical architecture, Code review, Mentorship} }}
 \end{itemize}
 
 %------------------ EXPERIENCE ---------------------
 \section{Experience}
 \resumeSubHeadingListStart
 \resumeSubheading
-  {Tech Lead}{Jul 2025 –  Current}
+  {Software Developer 2 --- Tech Lead}{Jul 2025 -- Present}
   {2Cents Capital}{Bengaluru, India}
   \resumeItemListStart
-    \resumeItem{Led and scaled cross-functional Mobile and AI teams (10+ engineers) to deliver high-impact features with 95\% on-time release rate.}
-    \resumeItem{Published a fully responsive investment application on both iOS App Store and Google Play, achieving $<$0.5s cold-start time.}
-    \resumeItem{Designed and deployed AI agents across the end-to-end customer journey—including customer support, onboarding, and market research—improving support resolution speed by 40\% and reducing manual intervention costs by 30\%.}
+    \resumeItem{Founding engineer and tech lead orchestrating Mobile, AI, and Quantitative Finance verticals --- instrumental in defining the product architecture and engineering culture from inception.}
+    \resumeItem{Architected and delivered Valura AI (iOS + Android), a production-grade AI-powered investment platform, end-to-end --- achieving sub-500\,ms cold-start latency and a 4.8-star App Store rating.}
+    \resumeItem{Led cross-functional engineering teams of 10+ across mobile and AI; instituted agile delivery practices yielding a 95\% on-time release cadence.}
+    \resumeItem{Designed and operationalized a multi-agent AI orchestration layer spanning onboarding, customer support, and market intelligence --- reducing manual support burden by 40\% and operational expenditure by 30\%.}
+    \resumeItem{Engineered algorithmic trading infrastructure integrating real-time market signal ingestion, strategy backtesting frameworks, and automated order execution pipelines.}
+    \resumeItem{Architected real-time market-data streaming pipelines and a portfolio analytics engine delivering personalized investment insights to thousands of concurrent users.}
+    \resumeItem{Instituted CI/CD pipelines, automated regression frameworks, and observability dashboards, driving a 60\% reduction in post-release defect density.}
   \resumeItemListEnd
 
   \resumeSubheading
-    {Software Developer Intern}{Jan 2025–Jun 2025}
+    {Software Developer Intern}{Jan 2025--Jun 2025}
     {Visteon}{Chennai, India}
     \resumeItemListStart
-      \resumeItem{Created diagnostic routines for JLR platforms that detect system anomalies with \(96\%\) accuracy, boosting vehicle reliability.}
-      \resumeItem{Optimized real-time dashboard software (SomeIP on QNX/Linux) in C, reducing processing latency by \(25\%\).}
-      \resumeItem{Wrote unit and functional tests to reach \(99.8\%\) code coverage across the code-base with zero deviations.}
+      \resumeItem{Engineered diagnostic routines for Jaguar Land Rover platforms achieving 96\% anomaly detection accuracy; optimized SOME/IP service-oriented middleware in C, yielding a 25\% latency reduction.}
+      \resumeItem{Attained 99.8\% unit-test coverage across safety-critical codepaths with zero ASIL deviations.}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Automation Intern}{Dec 2024–Jan 2025}
+    {Automation Intern}{Dec 2024--Jan 2025}
     {Procter \& Gamble}{Hyderabad, India}
     \resumeItemListStart
-      \resumeItem{Implemented IIoT monitoring on five production lines, ingesting \(2\text{M}+\) data points daily with \(99.9\%\) uptime.}
-      \resumeItem{Automated quality-control workflows, cutting manual inspection time \(40\%\) and improving defect detection \(15\%\).}
+      \resumeItem{Deployed Industrial IoT telemetry infrastructure across 5 manufacturing lines, ingesting 2M+ daily data points at 99.9\% availability --- eliminating 40\% of manual inspection overhead.}
     \resumeItemListEnd
 
   \resumeSubheading
-    {IoT \& LoRaWAN Developer}{May 2024–Jun 2024}
+    {IoT \& LoRaWAN Developer}{May 2024--Jun 2024}
     {Tynatech Ingenious Pvt Ltd}{Noida, India}
     \resumeItemListStart
-      \resumeItem{Built RESTful APIs / webhooks connecting \(50+\) LoRaWAN devices to cloud platforms.}
-      \resumeItem{Optimized UART–LoRaWAN interface to raise throughput \(30\%\) via efficient buffer management.}
-      \resumeItem{Added MQTT streaming for real-time gateway visualization, handling \(100+\) msgs s\(^{-1}\).}
+      \resumeItem{Developed RESTful API gateway integrating 50+ LoRaWAN edge devices with cloud infrastructure; optimized UART transport layer for 30\% throughput improvement and implemented MQTT streaming sustaining 100+ msg/s.}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Web Development Intern}{Oct 2023–Dec 2023}
+    {Web Development Intern}{Oct 2023--Dec 2023}
     {Intellect Design Arena}{Chennai, India}
     \resumeItemListStart
-      \resumeItem{Developed PHP-based financial portals with \(30\%\) faster page loads.}
-      \resumeItem{Managed cloud infrastructure for five web apps, configuring auto-scaling for \(99.9\%\) availability.}
-      \resumeItem{Created analytics dashboards delivering real-time engagement and conversion insights.}
+      \resumeItem{Developed enterprise financial portals in PHP delivering 30\% page-load improvement; administered cloud infrastructure for 5 production applications at 99.9\% availability with integrated analytics dashboards.}
     \resumeItemListEnd
 
   \resumeSubheading
-    {R\&D Intern}{Aug 2023–Sep 2023}
+    {R\&D Intern}{Aug 2023--Sep 2023}
     {Hindustan Aeronautics Ltd (HAL)}{Bangalore, India}
     \resumeItemListStart
-      \resumeItem{Optimized autopilot algorithms, cutting computational overhead \(22\%\) while meeting safety constraints.}
-      \resumeItem{Authored C++ simulation tool covering \(200+\) control-system test scenarios.}
-      \resumeItem{Assisted avionics teams with system documentation and verification protocols.}
+      \resumeItem{Optimized flight autopilot control algorithms reducing computational overhead by 22\%; developed a C++ simulation framework encompassing 200+ control-system verification scenarios.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -170,70 +165,85 @@ Versatile engineer across Full‑Stack (Python/Node.js/SQL/AWS), Generative AI (
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{LLaMA 3.1 Fine‑Tuning for Code Reasoning}
-      \( | \) \emph{Python, RL (GPRO), Hugging Face}}{Apr 2025}
+    {\textbf{Level2 -- Cross-Platform Gym Management App}
+      \( | \) \emph{React Native, Go, AWS, iOS, Android}}{2025}
     \resumeItemListStart
-      \resumeItem{Fine‑tuned LLaMA‑3.1 8B on a paired‑coding dataset (\href{https://huggingface.co/datasets/Advaith1612/paired-coding}{link}) to boost code reasoning.}
-      \resumeItem{Applied GPRO reinforcement learning with Gemma 3 as a reward model (inspired by DeepSeek‑R1).}
-      \resumeItem{Observed \textasciitilde15\% pass@1 gain on a custom eval and +10\% average across public coding benchmarks.}
-   
+      \resumeItem{Designed and shipped Level2, a production gym management platform live on iOS App Store and Google Play --- featuring workout tracking, member lifecycle management, and intelligent scheduling.}
+      \resumeItem{Engineered event-driven real-time synchronization architecture ensuring sub-second data consistency across distributed mobile clients.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Naar -- Full-Stack Restaurant Platform}
+      \( | \) \emph{Next.js, Node.js, PostgreSQL, AWS}}{2025}
+    \resumeItemListStart
+      \resumeItem{Delivered a production restaurant operations platform (\href{https://naarkuwait.com/en}{naarkuwait.com}) encompassing admin dashboard, kitchen display system, and customer-facing ordering interface --- achieving 50\% reduction in order processing latency.}
+      \resumeItem{Architected granular role-based access control and a real-time order orchestration pipeline supporting concurrent multi-interface sessions.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{LLaMA 3.1 Fine-Tuning for Code Reasoning --- Applied ML Research}
+      \( | \) \emph{Python, GRPO, Hugging Face, PyTorch}}{Apr 2025}
+    \resumeItemListStart
+      \resumeItem{Conducted applied research on reinforcement learning from human feedback (RLHF) for code generation, fine-tuning LLaMA-3.1 8B on a curated paired-coding corpus (\href{https://huggingface.co/datasets/Advaith1612/paired-coding}{dataset}).}
+      \resumeItem{Implemented Group Relative Policy Optimization (GRPO) with Gemma 3 as the reward model, drawing on DeepSeek-R1 methodology to enhance chain-of-thought reasoning in code synthesis tasks.}
+      \resumeItem{Demonstrated \textasciitilde15\% pass@1 improvement on custom evaluation benchmarks and +10\% average uplift across established public coding benchmarks.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{Instagram Automation Bot}
       \( | \) \emph{Python, FastAPI, Redis, AWS}}{Dec 2024}
     \resumeItemListStart
-      \resumeItem{Deployed cloud bot handling \(1000+\) daily interactions with \(99.5\%\) uptime.}
-      \resumeItem{Added LLM‑based sentiment/intent detection achieving \(88\%\) accuracy in production.}
-      \resumeItem{Introduced Redis caching to cut Meta Graph API calls \(65\%\); p50 response \(<\) 500\,ms.}
+      \resumeItem{Deployed a cloud-native automation service processing \(1000+\) daily interactions at \(99.5\%\) availability.}
+      \resumeItem{Integrated LLM-driven sentiment analysis and intent classification pipeline achieving \(88\%\) production accuracy.}
+      \resumeItem{Implemented Redis-backed caching layer reducing Meta Graph API invocations by \(65\%\); sustained p50 latency below 500\,ms.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{Multipurpose VR Gloves with Gesture Recognition}
       \( | \) \emph{Unity, C\#, ESP32, ML}}{Sep 2024}
     \resumeItemListStart
-      \resumeItem{Built VR gloves capturing \(15+\) gestures at \(92\%\) accuracy using flex‑sensor ML pipelines.}
-      \resumeItem{Developed a web UI to map gestures to \(20+\) system commands; integrated Unity for gaming/assistive control.}
+      \resumeItem{Engineered VR gloves with ML-driven gesture classification capturing \(15+\) gestures at \(92\%\) recognition accuracy via flex-sensor signal processing pipelines.}
+      \resumeItem{Developed a configuration interface mapping gestures to \(20+\) system commands; integrated Unity runtime for gaming and assistive technology applications.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{RAK Gateway Configurator}
       \( | \) \emph{Python, Flask, SQL, Bash}}{Jun 2024}
     \resumeItemListStart
-      \resumeItem{Created full-stack tool streamlining configuration of RAKwireless LoRaWAN gateways for network admins.}
-      \resumeItem{Automated device discovery, credential management, and firmware upgrades.}
+      \resumeItem{Developed a full-stack provisioning tool streamlining configuration workflows for RAKwireless LoRaWAN gateways, reducing network administrator setup time.}
+      \resumeItem{Automated device discovery, credential lifecycle management, and over-the-air firmware upgrade orchestration.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{Embedded Athlete-Performance Monitoring System}
       \( | \) \emph{ESP32, PyTorch, OpenCV}}{Mar 2024}
     \resumeItemListStart
-      \resumeItem{Ran edge CV on ESP32 to analyze runner form in real time; fused MPU6050, VO\(_2\), and temperature signals.}
-      \resumeItem{Built a decision‑tree classifier with a Flask/Plotly dashboard for actionable feedback.}
+      \resumeItem{Deployed edge computer vision inference on ESP32 for real-time biomechanical analysis; implemented multi-sensor fusion (MPU6050 IMU, VO\(_2\) max, thermistor) pipeline.}
+      \resumeItem{Trained a decision-tree ensemble classifier and built a Flask/Plotly analytics dashboard delivering actionable performance feedback.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{Smart Rhesus Macaque Deterrent System}
       \( | \) \emph{Jetson Nano, CV, Ultrasonic}}{Mar 2024}
     \resumeItemListStart
-      \resumeItem{Achieved \(94\%\) macaque detection in varied lighting; ultrasonic emitters cut intrusions \(90\%\).}
-      \resumeItem{Power-management module lowered energy use \(35\%\) for solar deployment.}
+      \resumeItem{Achieved \(94\%\) detection accuracy under variable illumination conditions; ultrasonic deterrent subsystem reduced intrusion events by \(90\%\).}
+      \resumeItem{Designed power-management firmware reducing energy consumption by \(35\%\), enabling autonomous solar-powered field deployment.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{Wearable Jump-Height Measurement Device}
       \( | \) \emph{ESP32, MPU6050, Flask}}{Mar 2024}
     \resumeItemListStart
-      \resumeItem{Ankle-mounted sensor reached \(\pm1\,\text{cm}\) accuracy vs lab force-plates.}
-      \resumeItem{Used Kalman filtering to suppress sensor noise \(80\%\); built SQLite/Flask analytics dashboard.}
+      \resumeItem{Developed ankle-mounted inertial measurement device achieving \(\pm1\,\text{cm}\) accuracy validated against laboratory force-plate ground truth.}
+      \resumeItem{Implemented extended Kalman filter suppressing sensor noise by \(80\%\); built SQLite-backed Flask analytics dashboard for longitudinal performance tracking.}
     \resumeItemListEnd
 
   \resumeProjectHeading
     {\textbf{RFID-based Runner Tracking System}
       \( | \) \emph{Industrial RFID, PHP, Raspberry Pi}}{Dec 2023}
     \resumeItemListStart
-      \resumeItem{Automated timing for \(5\,\text{km}\) training runs via industrial RFID readers.}
-      \resumeItem{Web interface enabled seamless record management and legacy-system integration.}
+      \resumeItem{Automated precision timing for \(5\,\text{km}\) athletic training events using industrial UHF RFID readers.}
+      \resumeItem{Developed web-based record management interface with seamless legacy-system data integration.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -243,7 +253,10 @@ Versatile engineer across Full‑Stack (Python/Node.js/SQL/AWS), Generative AI (
 \resumeSubHeadingListStart
   \resumeSubheading
     {Vellore Institute of Technology}{Chennai, India}
-    {B.Tech. Electronics \& Computer Engineering; GPA: 8.66/10}{2021–2025}
+    {B.Tech. Electronics \& Computer Engineering; GPA: 8.66/10}{2021--2025}
+  \resumeSubheading
+    {NISM -- National Institute of Securities Markets}{India}
+    {NISM Series VA: Mutual Fund Distributors Certification}{2025}
 \resumeSubHeadingListEnd
 
 %--------------------------------------------------

@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  11 MAY 2026 07:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.17)  11 MAY 2026 07:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**ai_resume.tex
-(./ai_resume.tex
+**embeeded.tex
+(./embeeded.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -366,8 +366,8 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count312
 )
-(./ai_resume.aux)
-\openout1 = `ai_resume.aux'.
+(./embeeded.aux)
+\openout1 = `embeeded.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
 LaTeX Font Info:    ... okay on input line 80.
@@ -402,9 +402,9 @@ LaTeX Font Info:    ... okay on input line 80.
 \everyMPtoPDFconversion=\toks32
 )
 Package hyperref Info: Link coloring OFF on input line 80.
- (./ai_resume.out) (./ai_resume.out)
+ (./embeeded.out) (./embeeded.out)
 \@outlinefile=\write3
-\openout3 = `ai_resume.out'.
+\openout3 = `embeeded.out'.
 
 
 
@@ -429,7 +429,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 4.08003pt, for example:
 (fancyhdr)                \setlength{\footskip}{4.08003pt}.
 
-[2] (./ai_resume.aux)
+[2] (./embeeded.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -438,17 +438,17 @@ L3 programming layer <2026-01-19>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `ai_resume.out' has not changed.
+Package rerunfilecheck Info: File `embeeded.out' has not changed.
 (rerunfilecheck)             Checksum: 1A8D568F0A97B6119BB06308E7AF0858;536.
  ) 
 Here is how much of TeX's memory you used:
- 11570 strings out of 469515
- 178445 string characters out of 5470807
- 634396 words of memory out of 5000000
- 40088 multiletter control sequences out of 15000+600000
+ 11569 strings out of 469515
+ 178408 string characters out of 5470807
+ 633391 words of memory out of 5000000
+ 40087 multiletter control sequences out of 15000+600000
  634441 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,11n,79p,466b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,415b,659s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -458,10 +458,10 @@ ic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb>
-Output written on ai_resume.pdf (2 pages, 136270 bytes).
+Output written on embeeded.pdf (2 pages, 135482 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

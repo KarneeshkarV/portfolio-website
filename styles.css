@@ -243,6 +243,19 @@ section .title::after {
   color: #444;
   font-weight: 500;
 }
+.home .home-content .home-tagline {
+  max-width: 720px;
+  margin: 18px auto 4px auto;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+  font-weight: 400;
+  text-align: center;
+}
+.home .home-content .home-tagline strong {
+  color: #000;
+  font-weight: 600;
+}
 .home .home-content a {
   display: inline-block;
   background: #333;

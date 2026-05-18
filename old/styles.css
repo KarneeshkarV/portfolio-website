@@ -847,6 +847,43 @@ section .title::after {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Store / external links — revealed on card hover */
+.projects .card .store-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(8px);
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.3s ease;
+}
+.projects .card .store-links .github-link {
+  margin-top: 0;
+  align-self: auto;
+}
+.projects .card:hover .store-links,
+.projects .card:focus-within .store-links {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 240px;
+  pointer-events: auto;
+}
+@media (hover: none) {
+  .projects .card .store-links {
+    opacity: 1;
+    transform: none;
+    max-height: 240px;
+    pointer-events: auto;
+  }
+}
+.github-link .hf-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
 /* Card animation */
 .card-animate {
   opacity: 0;
@@ -1208,9 +1245,7 @@ section .title::after {
     font-size: 14px;
   }
   .vim-help {
-    width: 160px;
-    bottom: 15px;
-    left: 15px;
+    display: none;
   }
 }
 .ball {

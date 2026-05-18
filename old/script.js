@@ -266,10 +266,41 @@ $(document).ready(function () {
   document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll("#heartfelt-design .service-card");
 
+    function setActiveCard(cardToActivate) {
+      console.warn("setActiveCard function needs rewrite for inline styles.");
+      cards.forEach((c) => {
+        if (c !== cardToActivate) {
+          c.classList.remove("active");
+        }
+      });
+      if (cardToActivate) {
+        cardToActivate.classList.add("active");
+      }
+    }
+
     cards.forEach((card) => {
       card.addEventListener("click", function () {
-        cards.forEach((c) => c.classList.remove("active"));
-        this.classList.add("active");
+        this.style.transform = "scale(0.98)";
+        setTimeout(() => {
+          if (!this.classList.contains("active")) {
+            this.style.transform = "translateY(0px)";
+          } else {
+            this.style.transform = "translateY(-6px)";
+          }
+          console.warn("Card click handler needs rewrite for inline styles.");
+        }, 100);
+      });
+
+      card.addEventListener("mouseleave", function () {
+        if (!this.classList.contains("active")) {
+          if (!this.style.transform || !this.style.transform.includes("scale")) {
+            this.style.transform = "";
+          }
+        } else {
+          if (!this.style.transform || !this.style.transform.includes("scale")) {
+            this.style.transform = "translateY(-6px)";
+          }
+        }
       });
     });
   });

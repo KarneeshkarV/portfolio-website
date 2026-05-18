@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/old/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -27,17 +27,17 @@
     <div class="ball"></div>
     <div class="vim-help">
       <div class="vim-help-header">
-        <span>~/motions</span>
+        <span>Of course for my fellow vim lovers</span>
         <button class="vim-help-toggle"><i class="fas fa-times"></i></button>
       </div>
       <div class="vim-help-content">
         <ul>
-          <li><kbd>j</kbd> &mdash; scroll down</li>
-          <li><kbd>k</kbd> &mdash; scroll up</li>
-          <li><kbd>gg</kbd> &mdash; go to top</li>
-          <li><kbd>G</kbd> &mdash; go to bottom</li>
-          <li><kbd>:q</kbd> &mdash; exit</li>
-          <li><kbd>?</kbd> &mdash; toggle help</li>
+          <li><kbd>j</kbd> - Scroll down</li>
+          <li><kbd>k</kbd> - Scroll up</li>
+          <li><kbd>gg</kbd> - Go to top</li>
+          <li><kbd>G</kbd> - Go to bottom</li>
+          <li><kbd>:q</kbd> - Exit website</li>
+          <li><kbd>?</kbd> - Toggle this help</li>
         </ul>
       </div>
     </div>
@@ -46,11 +46,12 @@
       <div class="max-width">
         <ul class="menu">
           <li><a href="#home" class="menu-btn">Home</a></li>
-          <li><a href="#heartfelt-design" class="menu-btn">Expertise</a></li>
+          <li><a href="#heartfelt-design" class="menu-btn">Design</a></li>
+          <li><a href="#services" class="menu-btn">Services</a></li>
           <li><a href="#education" class="menu-btn">Education</a></li>
           <li><a href="#experience" class="menu-btn">Experience</a></li>
           <li><a href="#projects" class="menu-btn">Projects</a></li>
-          <li><a href="#tech-skills" class="menu-btn">Skills</a></li>
+          <li><a href="#tech-skills" class="menu-btn">Tech Skills</a></li>
           <li><a href="#about" class="menu-btn">About</a></li>
           <li><a href="#contact" class="menu-btn">Contact</a></li>
         </ul>
@@ -61,9 +62,9 @@
       <div class="home__animated-background"></div>
       <div class="max-width">
         <div class="home-content">
-          <div class="text-1">whoami</div>
+          <div class="text-1">Hello, my name is</div>
           <div class="text-2">Karneeshkar V</div>
-          <div class="text-3">&gt; <span class="typing"></span></div>
+          <div class="text-3">And I'm a <span class="typing"></span></div>
           <div class="text-4"><span class="typing-2"></span></div>
           <p class="home-tagline">
             Software engineer building <strong>AI</strong>, <strong>fintech</strong>, and <strong>embedded systems</strong> at production scale.
@@ -79,79 +80,424 @@
       </div>
     </section>
 
-    <section class="expertise" id="heartfelt-design">
+    <section
+      class="heartfelt-design-section"
+      id="heartfelt-design"
+      style="
+        border-radius: 50px;
+        padding: 100px 0;
+        background-color: #0d0d0f;
+      "
+    >
       <div class="max-width">
-        <h2 class="title">Software Development Expertise</h2>
-        <div class="expertise-inner">
-          <header class="expertise-header">
-            <div class="expertise-headline">
-              <span class="expertise-kicker">// what i build</span>
-              <h3>Robust, scalable systems<br />from silicon to cloud.</h3>
+        <h2 class="title" style="color: #fff; border-bottom-color: #fff">
+          Software Development Expertise
+        </h2>
+        <div
+          class="container"
+          style="
+            max-width: 1100px;
+            width: 100%;
+            padding: 40px;
+            background-color: #111113;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            box-sizing: border-box;
+          "
+        >
+          <header
+            class="header"
+            style="
+              display: flex;
+              justify-content: space-between;
+              gap: 40px;
+              margin-bottom: 50px;
+              flex-wrap: wrap;
+              box-sizing: border-box;
+            "
+          >
+            <div
+              class="header-left"
+              style="flex: 1; min-width: 250px; box-sizing: border-box"
+            >
+              <h1
+                class="title"
+                style="
+                  font-size: 2.5rem;
+                  font-weight: 700;
+                  color: #ffffff;
+                  margin: 0 0 5px 0;
+                  line-height: 1.2;
+                  text-align: left;
+                "
+              >
+                Software Development Expertise
+              </h1>
+              <h2
+                class="subtitle"
+                style="
+                  font-size: 1.8rem;
+                  font-weight: 600;
+                  color: #8a4fff;
+                  margin: 0;
+                  text-align: left;
+                "
+              >
+                Building Robust, Scalable Solutions
+              </h2>
             </div>
-            <div class="expertise-copy">
-              <p>
+            <div
+              class="header-right"
+              style="
+                flex: 1.5;
+                min-width: 300px;
+                font-size: 0.95rem;
+                line-height: 1.7;
+                color: #a0a0a0;
+                box-sizing: border-box;
+              "
+            >
+              <p style="margin: 0 0 1em 0">
                 I tackle every project with a strong foundation in software
-                engineering principles &mdash; each solution reliable,
+                engineering principles, ensuring each solution is reliable,
                 maintainable, and efficient.
               </p>
-              <p>
-                A <strong>systematic development approach</strong> combined with
-                <strong>pragmatic problem solving</strong> drives delivery of
-                high-quality, scalable applications.
+              <p style="margin: 0 0 1em 0">
+                <b style="font-weight: 600; color: #ffffff"
+                  >Systematic development approach</b
+                >
+                combined with
+                <b style="font-weight: 600; color: #ffffff"
+                  >innovative problem solving</b
+                >
+                drives my process to deliver high-quality, scalable
+                applications.
               </p>
-              <p>
-                My commitment is to ship software that is not only functional
-                but optimized for performance and longevity.
+              <p style="margin: 0">
+                My commitment is to create software products that are not only
+                functional but also optimized for performance and longevity.
               </p>
             </div>
           </header>
 
-          <div class="expertise-grid">
-            <article class="service-card">
-              <div class="icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.07 19.08L3.42 17.58L10.92 10.08L13.92 13.08L19.5 7.5L21 9L13.92 16.08L10.92 13.08L5.07 18.92L5.07 19.08Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M15 3.42L15.84 5.03L17.58 5.58L16.54 6.98L16.66 8.84L15 7.92L13.34 8.84L13.46 6.98L12.42 5.58L14.16 5.03L15 3.42Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <div
+            class="services"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: 25px;
+              box-sizing: border-box;
+            "
+          >
+            <!-- Service Card 1: Backend Development -->
+            <div
+              class="service-card"
+              style="
+                background-color: #1a1a1d;
+                border-radius: 12px;
+                padding: 25px;
+                border: 1px solid #2a2a2f;
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.3s ease, border-color 0.3s ease,
+                  background 0.4s ease;
+                cursor: pointer;
+                box-sizing: border-box;
+              "
+            >
+              <div
+                class="icon"
+                style="
+                  font-size: 1rem;
+                  margin-bottom: 15px;
+                  color: #8a4fff;
+                "
+              >
+                <!-- SVG Icon for Backend Development -->
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="width: 32px; height: 32px"
+                >
+                  <path
+                    d="M5.07 19.08L3.42 17.58L10.92 10.08L13.92 13.08L19.5 7.5L21 9L13.92 16.08L10.92 13.08L5.07 18.92L5.07 19.08Z"
+                    stroke="#8a4fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 3.42L15.84 5.03L17.58 5.58L16.54 6.98L16.66 8.84L15 7.92L13.34 8.84L13.46 6.98L12.42 5.58L14.16 5.03L15 3.42Z"
+                    stroke="#8a4fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
-              <h3 class="service-title">Backend Development</h3>
-              <p class="service-description">REST APIs, FastAPI, Axum, Node.js, PHP</p>
-            </article>
+              <h3
+                class="service-title"
+                style="
+                  font-size: 1.15rem;
+                  font-weight: 600;
+                  color: #ffffff;
+                  margin-bottom: 8px;
+                "
+              >
+                Backend Development
+              </h3>
+              <p
+                class="service-description"
+                style="
+                  font-size: 0.9rem;
+                  color: #a0a0a0;
+                  line-height: 1.5;
+                  margin: 0;
+                "
+              >
+                REST APIs, FastAPI, Axum, Node.js, PHP
+              </p>
+            </div>
 
-            <article class="service-card">
-              <div class="icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L14.32 8.68L21 11L14.32 13.32L12 20L9.68 13.32L3 11L9.68 8.68L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M5 4L6.32 7.68L10 9L6.32 10.32L5 14L3.68 10.32L0 9L3.68 7.68L5 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(15, 15) scale(0.5)" />
+            <!-- Service Card 2: AI & Automation -->
+            <div
+              class="service-card"
+              style="
+                background-color: #1a1a1d;
+                border-radius: 12px;
+                padding: 25px;
+                border: 1px solid #2a2a2f;
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.3s ease, border-color 0.3s ease,
+                  background 0.4s ease;
+                cursor: pointer;
+                box-sizing: border-box;
+              "
+            >
+              <div
+                class="icon"
+                style="
+                  font-size: 1rem;
+                  margin-bottom: 15px;
+                  color: #8a4fff;
+                "
+              >
+                <!-- SVG Icon for AI & Automation -->
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="width: 32px; height: 32px"
+                >
+                  <path
+                    d="M12 2L14.32 8.68L21 11L14.32 13.32L12 20L9.68 13.32L3 11L9.68 8.68L12 2Z"
+                    stroke="#8a4fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 4L6.32 7.68L10 9L6.32 10.32L5 14L3.68 10.32L0 9L3.68 7.68L5 4Z"
+                    stroke="#8a4fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(15, 15) scale(0.5)"
+                  />
                 </svg>
               </div>
-              <h3 class="service-title">AI &amp; Automation</h3>
-              <p class="service-description">LLMs, RAG, Function Calling, Workflow Automation</p>
-            </article>
+              <h3
+                class="service-title"
+                style="
+                  font-size: 1.15rem;
+                  font-weight: 600;
+                  color: #ffffff;
+                  margin-bottom: 8px;
+                "
+              >
+                AI & Automation
+              </h3>
+              <p
+                class="service-description"
+                style="
+                  font-size: 0.9rem;
+                  color: #a0a0a0;
+                  line-height: 1.5;
+                  margin: 0;
+                "
+              >
+                LLMs, RAG, Function Calling, Workflow Automation
+              </p>
+            </div>
 
-            <article class="service-card active">
-              <div class="icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
-                  <path d="M8 20L16 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                  <path d="M12 16L12 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            <!-- Service Card 3: Cloud Solutions -->
+            <div
+              class="service-card active"
+              style="
+                border-radius: 12px;
+                padding: 25px;
+                background: linear-gradient(145deg, #583cf0 10%, #311f7a 80%);
+                border-color: transparent;
+                transform: translateY(-6px);
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.3s ease;
+                cursor: pointer;
+                box-sizing: border-box;
+              "
+            >
+              <div
+                class="icon"
+                style="
+                  font-size: 1rem;
+                  margin-bottom: 15px;
+                  color: #ffffff;
+                "
+              >
+                <!-- SVG Icon for Cloud Solutions -->
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="width: 32px; height: 32px; transform: scale(1.1)"
+                >
+                  <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="12"
+                    rx="2"
+                    stroke="#ffffff"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M8 20L16 20"
+                    stroke="#ffffff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 16L12 20"
+                    stroke="#ffffff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </div>
-              <h3 class="service-title">Cloud Solutions</h3>
-              <p class="service-description">AWS, DigitalOcean, Azure, Docker</p>
-            </article>
+              <h3
+                class="service-title"
+                style="
+                  font-size: 1.15rem;
+                  font-weight: 600;
+                  color: #ffffff;
+                  margin-bottom: 8px;
+                "
+              >
+                Cloud Solutions
+              </h3>
 
-            <article class="service-card">
-              <div class="icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 8L2 12L6 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M18 8L22 12L18 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M14.5 4L9.5 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <p
+                class="service-description"
+                style="
+                  font-size: 0.9rem;
+                  color: rgba(255, 255, 255, 0.85);
+                  line-height: 1.5;
+                  margin: 0;
+                "
+              ></p>
+              AWS, DigitalOcean, Azure, Docker
+            </div>
+
+            <!-- Service Card 4: Frontend Development -->
+            <div
+              class="service-card"
+              style="
+                background-color: #1a1a1d;
+                border-radius: 12px;
+                padding: 25px;
+                border: 1px solid #2a2a2f;
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.3s ease, border-color 0.3s ease,
+                  background 0.4s ease;
+                cursor: pointer;
+                box-sizing: border-box;
+              "
+            >
+              <div
+                class="icon"
+                style="
+                  font-size: 1rem;
+                  margin-bottom: 15px;
+                  color: #8a4fff;
+                "
+              >
+                <!-- SVG Icon for Frontend Development -->
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="width: 32px; height: 32px"
+                >
+                  <path
+                    d="M6 8L2 12L6 16"
+                    stroke="#8a4fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18 8L22 12L18 16"
+                    stroke="#8a4fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14.5 4L9.5 20"
+                    stroke="#8a4fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
               </div>
-              <h3 class="service-title">Frontend Development</h3>
-              <p class="service-description">React, JavaScript, Responsive UI, UX Design</p>
-            </article>
+              <h3
+                class="service-title"
+                style="
+                  font-size: 1.15rem;
+                  font-weight: 600;
+                  color: #ffffff;
+                  margin-bottom: 8px;
+                "
+              >
+                Frontend Development
+              </h3>
+              <p
+                class="service-description"
+                style="
+                  font-size: 0.9rem;
+                  color: #a0a0a0;
+                  line-height: 1.5;
+                  margin: 0;
+                "
+              >
+                React, JavaScript, Responsive UI, UX Design
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -328,7 +674,7 @@
                 Level2 &mdash; Gym Management Platform
               </div>
               <div class="tech-stack">
-                React Native &middot; Go &middot; AWS &middot; PostgreSQL
+                Technologies: React Native, Go, AWS, PostgreSQL
               </div>
               <div class="date">2025 &middot; Live on iOS &amp; Android</div>
               <ul>
@@ -339,13 +685,6 @@
                   Built an event-driven sync architecture achieving sub-second consistency across distributed mobile clients.
                 </li>
               </ul>
-              <a
-                href="https://www.level2.in/"
-                class="github-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i class="fas fa-external-link-alt"></i> level2.in</a
-              >
             </div>
           </div>
 
@@ -355,7 +694,7 @@
                 Naar &mdash; Restaurant Operations Platform
               </div>
               <div class="tech-stack">
-                Next.js &middot; Node.js &middot; PostgreSQL &middot; AWS
+                Technologies: Next.js, Node.js, PostgreSQL, AWS
               </div>
               <div class="date">2025 &middot; Live deployment</div>
               <ul>
@@ -371,7 +710,7 @@
                 class="github-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><i class="fas fa-external-link-alt"></i> naarkuwait.com</a
+                ><i class="fas fa-external-link-alt"></i> Visit naarkuwait.com</a
               >
             </div>
           </div>
@@ -382,7 +721,7 @@
                 LLaMA 3.1 Fine-Tuning for Code Reasoning
               </div>
               <div class="tech-stack">
-                Python &middot; PyTorch &middot; GRPO &middot; Hugging Face &middot; Gemma 3
+                Technologies: Python, PyTorch, GRPO, Hugging Face, Gemma 3
               </div>
               <div class="date">Apr 2025</div>
               <ul>
@@ -398,7 +737,7 @@
                 class="github-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                ><i class="fab fa-github"></i> View on Hugging Face</a
+                ><i class="fab fa-github"></i> View Model on Hugging Face</a
               >
             </div>
           </div>
@@ -407,7 +746,7 @@
             <div class="box">
               <div class="project-title">Social Media Automation Engine</div>
               <div class="tech-stack">
-                Python &middot; FastAPI &middot; Redis &middot; AWS &middot; Meta Graph API
+                Technologies: Python, FastAPI, Redis, AWS, Meta Graph API
               </div>
               <div class="date">2024</div>
               <ul>
@@ -434,7 +773,7 @@
                 VR Gesture-Recognition Gloves
               </div>
               <div class="tech-stack">
-                ESP32 &middot; Unity &middot; C# &middot; Python &middot; Flex Sensors &middot; IMU
+                Technologies: ESP32, Unity, C#, Python, Flex Sensors, IMU
               </div>
               <div class="date">Sept 2024</div>
               <ul>
@@ -461,7 +800,7 @@
                 Edge Sports Analytics System
               </div>
               <div class="tech-stack">
-                ESP32 &middot; PyTorch &middot; OpenCV &middot; Flask &middot; MPU6050
+                Technologies: ESP32, PyTorch, OpenCV, Flask, MPU6050
               </div>
               <div class="date">2024</div>
               <ul>
@@ -488,7 +827,7 @@
                 Smart Rhesus Macaque Deterrent System
               </div>
               <div class="tech-stack">
-                Raspberry Pi &middot; Jetson Nano &middot; PyTorch &middot; Computer Vision &middot; Ultrasonics
+                Technologies: Raspberry Pi, Jetson Nano, PyTorch, Computer Vision, Ultrasonic Emitters
               </div>
               <div class="date">Mar 2024</div>
               <ul>
@@ -511,7 +850,7 @@
                 ProjectTheata &mdash; Backend
               </div>
               <div class="tech-stack">
-                Go &middot; PostgreSQL &middot; REST APIs
+                Technologies: Go, PostgreSQL, REST APIs
               </div>
               <div class="date">2024</div>
               <ul>
@@ -536,7 +875,7 @@
       <div class="max-width">
         <h2 class="title">Tech Skills</h2>
         <div class="skills-content">
-          <div class="column left">
+          <div class="column left" style="width: 100%">
             <div class="text">Technologies I work with</div>
             <p>
               Hands-on experience across the full stack &mdash; from embedded sensor firmware up through LLM fine-tuning and production cloud infrastructure.
@@ -590,7 +929,7 @@
         <h2 class="title">About Me</h2>
         <div class="about-content">
           <div class="column left">
-            <img src="./temp.png" alt="Karneeshkar V - Photo" />
+            <img src="/temp.png" alt="Karneeshkar V - Photo" />
           </div>
           <div class="column right">
             <div class="text">Who am I?</div>
@@ -604,7 +943,7 @@
               B.Tech in Electronics &amp; Computer Engineering from <strong>VIT Chennai</strong> (8.66 / 10). Outside of work I&rsquo;m a vim user (try pressing <kbd>?</kbd> on this page), neovim config tinkerer, and into Linux daily-drivers.
             </p>
             <a
-              href="./latex_resume/main_resume.pdf"
+              href="/latex_resume/main_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               >Download Resume</a
@@ -641,7 +980,9 @@
                 <i class="fas fa-envelope"></i>
                 <div class="info">
                   <div class="head">Email</div>
-                  <div class="sub-title">karneeshkar68@gmail.com</div>
+                  <div style="color: blue" class="sub-title">
+                    karneeshkar68@gmail.com
+                  </div>
                 </div>
               </div>
               <div
@@ -705,6 +1046,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/old/script.js"></script>
   </body>
 </html>

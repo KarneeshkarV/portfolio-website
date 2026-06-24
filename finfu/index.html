@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finfluencer Scoreboard</title><style>
+:root{--bg:#0b0e14;--panel:#141925;--panel2:#1b2230;--line:#262f40;--txt:#e6e9ef;
+--muted:#8b95a7;--accent:#5b9bff;--green:#2fd27a;--red:#ff5d6c;--amber:#ffc24b;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+header.top{border-bottom:1px solid var(--line);padding:22px 0;margin-bottom:8px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:20px;margin:34px 0 12px}
+.sub{color:var(--muted);font-size:14px}
+.crumb{color:var(--muted);font-size:13px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.card .v{font-size:24px;font-weight:650;margin-top:6px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--panel2);color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#192234}
+.pos{color:var(--green)}.neg{color:var(--red)}.flat{color:var(--muted)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid var(--line)}
+.badge.buy{color:var(--green);border-color:#1f5a3d;background:#10251a}
+.badge.sell{color:var(--red);border-color:#5a1f28;background:#251014}
+.badge.in{color:var(--accent);border-color:#234a7a;background:#0f1c2e}
+.badge.lo{color:var(--amber);border-color:#5a4a1f;background:#251f10}
+.rank{color:var(--muted);font-variant-numeric:tabular-nums}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;color:var(--muted);font-size:13px;margin:14px 0}
+.quote{color:var(--muted);font-style:italic;max-width:520px;white-space:normal}
+.pill{font-size:12px;color:var(--muted)}
+.bar{height:6px;border-radius:3px;background:var(--panel2);overflow:hidden;margin-top:8px}
+.bar>i{display:block;height:100%}
+footer{margin-top:50px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:16px}
+.tabs a{margin-right:16px}
+.win{color:var(--green)}.lose{color:var(--red)}
+</style></head><body><div class="wrap">
+<header class="top"><div class="tabs">
+<a href="index.html">🏆 Scoreboard</a>
+<a href="methodology.html">📋 Methodology</a>
+<a href="data/scored_calls.csv">⬇ CSV</a>
+<a href="data/scored_calls.json">⬇ JSON</a>
+</div></header>
+<h1>Finfluencer Prediction Scoreboard</h1>
+<div class="sub">5-year backtest of forward-looking stock calls from finance creators,
+scored on benchmark-relative, direction-adjusted return. India vs ^NSEI, US vs SPY.</div>
+<div class="grid">
+<div class="card"><div class="k">Creators scored</div><div class="v">16</div></div>
+<div class="card"><div class="k">Forward calls scored</div><div class="v">2090</div></div>
+<div class="card"><div class="k">Window</div><div class="v" style="font-size:18px">2021-06-20<br>→ 2026-06-20</div></div>
+<div class="card"><div class="k">Transcript coverage</div><div class="v">100.0%</div></div>
+</div>
+<div class="note"><b>🇮🇳 India</b> — best: <b>SOIC (School of Intelligent Investing)</b> (avg alpha <span class="pos">+12.9%</span>, n=131). Likely inverse indicator: <b>Shankar Nath</b> (avg alpha <span class="neg">-1.9%</span>).</div><div class="note"><b>🇺🇸 US</b> — best: <b>Tom Nash</b> (avg alpha <span class="pos">+2.8%</span>, n=210). Likely inverse indicator: <b>Cathie Wood / ARK Invest</b> (avg alpha <span class="neg">-14.5%</span>).</div>
+<h2>🇮🇳 India leaderboard</h2><table><thead><tr><th>#</th><th>Creator</th><th class="num">Calls</th><th class="num">Hit rate</th><th class="num">Avg alpha</th><th class="num">Median alpha</th><th class="num">Conv-wtd alpha</th><th>Notable</th></tr></thead><tbody><tr><td class="rank">1</td><td><a href="creators/soic-school-of-intelligent-investing.html">SOIC (School of Intelligent Investing)</a></td><td class="num">131</td><td class="num">66%</td><td class="num"><span class="pos">+12.9%</span></td><td class="num"><span class="pos">+5.5%</span></td><td class="num"><span class="pos">+15.4%</span></td><td>MU <span class="pos">+437.0%</span></td></tr><tr><td class="rank">2</td><td><a href="creators/akshat-shrivastava-wisdom-hatch.html">Akshat Shrivastava (Wisdom Hatch)</a></td><td class="num">212</td><td class="num">46%</td><td class="num"><span class="pos">+10.2%</span></td><td class="num"><span class="neg">-1.7%</span></td><td class="num"><span class="pos">+8.8%</span></td><td>AMD <span class="pos">+292.3%</span></td></tr><tr><td class="rank">3</td><td><a href="creators/power-of-stocks-subasish-pani.html">Power of Stocks (Subasish Pani)</a></td><td class="num">8</td><td class="num">62%</td><td class="num"><span class="pos">+7.1%</span></td><td class="num"><span class="pos">+3.9%</span></td><td class="num"><span class="pos">+4.0%</span></td><td>GOLDBEES <span class="pos">+50.0%</span></td></tr><tr><td class="rank">4</td><td><a href="creators/convexity-rohit-srivastava.html">Convexity (Rohit Srivastava)</a></td><td class="num">37</td><td class="num">62%</td><td class="num"><span class="pos">+5.9%</span></td><td class="num"><span class="pos">+2.9%</span></td><td class="num"><span class="pos">+6.4%</span></td><td>SILVER <span class="pos">+66.9%</span></td></tr><tr><td class="rank">5</td><td><a href="creators/kunal-saraogi-equityrush.html">Kunal Saraogi (Equityrush)</a></td><td class="num">55</td><td class="num">40%</td><td class="num"><span class="pos">+3.9%</span></td><td class="num"><span class="neg">-2.4%</span></td><td class="num"><span class="pos">+4.2%</span></td><td>HFCL <span class="pos">+126.1%</span></td></tr><tr><td class="rank">6</td><td><a href="creators/vivek-bajaj-stockedge.html">Vivek Bajaj (StockEdge)</a></td><td class="num">114</td><td class="num">51%</td><td class="num"><span class="pos">+3.2%</span></td><td class="num"><span class="pos">+0.2%</span></td><td class="num"><span class="pos">+3.5%</span></td><td>SILVER <span class="pos">+119.3%</span></td></tr><tr><td class="rank">7</td><td><a href="creators/p-r-sundar.html">P R Sundar</a></td><td class="num">24</td><td class="num">58%</td><td class="num"><span class="pos">+3.0%</span></td><td class="num"><span class="pos">+0.5%</span></td><td class="num"><span class="pos">+2.8%</span></td><td>INFY <span class="pos">+20.2%</span></td></tr><tr><td class="rank">8</td><td><a href="creators/nooresh-merani.html">Nooresh Merani</a></td><td class="num">11</td><td class="num">55%</td><td class="num"><span class="pos">+0.2%</span></td><td class="num"><span class="pos">+1.5%</span></td><td class="num"><span class="pos">+2.9%</span></td><td>SIEMENS <span class="pos">+18.0%</span></td></tr><tr><td class="rank">9</td><td><a href="creators/ghanshyam-tech.html">Ghanshyam Tech</a></td><td class="num">26</td><td class="num">50%</td><td class="num"><span class="neg">-0.6%</span></td><td class="num"><span class="pos">+0.7%</span></td><td class="num"><span class="neg">-0.7%</span></td><td>BRITANNIA <span class="pos">+14.0%</span></td></tr><tr><td class="rank">10</td><td><a href="creators/shankar-nath.html">Shankar Nath</a></td><td class="num">55</td><td class="num">44%</td><td class="num"><span class="neg">-1.9%</span></td><td class="num"><span class="neg">-3.0%</span></td><td class="num"><span class="pos">+1.8%</span></td><td>SILVERIETF <span class="pos">+83.8%</span></td></tr></tbody></table>
+<h2>🇺🇸 US leaderboard</h2><table><thead><tr><th>#</th><th>Creator</th><th class="num">Calls</th><th class="num">Hit rate</th><th class="num">Avg alpha</th><th class="num">Median alpha</th><th class="num">Conv-wtd alpha</th><th>Notable</th></tr></thead><tbody><tr><td class="rank">1</td><td><a href="creators/tom-nash.html">Tom Nash</a></td><td class="num">210</td><td class="num">48%</td><td class="num"><span class="pos">+2.8%</span></td><td class="num"><span class="neg">-1.2%</span></td><td class="num"><span class="pos">+2.6%</span></td><td>MU <span class="pos">+153.1%</span></td></tr><tr><td class="rank">2</td><td><a href="creators/meet-kevin-kevin-paffrath.html">Meet Kevin (Kevin Paffrath)</a></td><td class="num">146</td><td class="num">46%</td><td class="num"><span class="pos">+0.9%</span></td><td class="num"><span class="neg">-1.3%</span></td><td class="num"><span class="pos">+0.8%</span></td><td>ARM <span class="pos">+169.1%</span></td></tr><tr><td class="rank">3</td><td><a href="creators/financial-education-jeremy-lefebvre.html">Financial Education (Jeremy Lefebvre)</a></td><td class="num">623</td><td class="num">38%</td><td class="num"><span class="neg">-1.2%</span></td><td class="num"><span class="neg">-8.7%</span></td><td class="num"><span class="pos">+0.7%</span></td><td>MU <span class="pos">+264.3%</span></td></tr><tr><td class="rank">4</td><td><a href="creators/tom-lee-fundstrat-fs-insight.html">Tom Lee (Fundstrat / FS Insight)</a></td><td class="num">182</td><td class="num">36%</td><td class="num"><span class="neg">-5.1%</span></td><td class="num"><span class="neg">-2.5%</span></td><td class="num"><span class="neg">-5.6%</span></td><td>AMD <span class="pos">+121.2%</span></td></tr><tr><td class="rank">5</td><td><a href="creators/stock-moe.html">Stock Moe</a></td><td class="num">177</td><td class="num">28%</td><td class="num"><span class="neg">-6.0%</span></td><td class="num"><span class="neg">-6.6%</span></td><td class="num"><span class="neg">-6.1%</span></td><td>PANW <span class="pos">+64.4%</span></td></tr><tr><td class="rank">6</td><td><a href="creators/cathie-wood-ark-invest.html">Cathie Wood / ARK Invest</a></td><td class="num">79</td><td class="num">19%</td><td class="num"><span class="neg">-14.5%</span></td><td class="num"><span class="neg">-15.7%</span></td><td class="num"><span class="neg">-14.9%</span></td><td>AMD <span class="pos">+159.9%</span></td></tr></tbody></table>
+<div class="note">Ranked by average benchmark-relative alpha at each call's stated
+horizon (default 6-month if none stated). "Conv-wtd alpha" weights by stated
+conviction (high=3, med=2, low=1). Creators with &lt;5 scored calls are flagged
+<span class="badge lo">low n</span> — treat as indicative only. Full method on the
+<a href="methodology.html">methodology page</a>.</div>
+<footer>Finfluencer Prediction Scoreboard · window 2021-06-20→2026-06-20 ·
+generated 2026-06-21 · prices &amp; benchmarks via this repo's
+screener.backtester data layer (yfinance, SPY / ^NSEI). Forward-looking,
+benchmark-relative, direction-adjusted alpha. Not investment advice.</footer>
+</div></body></html>

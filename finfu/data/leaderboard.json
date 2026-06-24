@@ -1,0 +1,498 @@
+[
+  {
+    "creator_id": "akshat-shrivastava",
+    "name": "Akshat Shrivastava (Wisdom Hatch)",
+    "market": "india",
+    "calls_extracted": 291,
+    "calls_scored": 212,
+    "hit_rate": 0.4623,
+    "avg_alpha": 0.1022,
+    "median_alpha": -0.0171,
+    "avg_signed_return": 0.1728,
+    "conviction_weighted_alpha": 0.0878,
+    "best_call": {
+      "ticker": "AMD",
+      "action": "buy",
+      "call_date": "2025-06-20",
+      "alpha": 2.9231,
+      "stock_return": 3.1903,
+      "quote": "From a short-term perspective this has become a little bit bloated. I would retain some bit of cash positions to buy these stocks when they actually fall a lot next. If you're taking a 5 10 year viewp",
+      "source_url": "https://www.youtube.com/watch?v=CtBJxdShSMw"
+    },
+    "worst_call": {
+      "ticker": "AMD",
+      "action": "hold-avoid",
+      "call_date": "2025-11-20",
+      "alpha": -1.0376,
+      "stock_return": 1.1823,
+      "quote": "At this juncture, if you go and invest your money in AMD, that is called as taking naked risk... you cannot end up buying these companies here, right? This is just pure madness. What you needed to do ",
+      "source_url": "https://www.youtube.com/watch?v=n3kvN9oQdLY"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "cathie-ark",
+    "name": "Cathie Wood / ARK Invest",
+    "market": "us",
+    "calls_extracted": 88,
+    "calls_scored": 79,
+    "hit_rate": 0.1899,
+    "avg_alpha": -0.1453,
+    "median_alpha": -0.1572,
+    "avg_signed_return": -0.0869,
+    "conviction_weighted_alpha": -0.1487,
+    "best_call": {
+      "ticker": "AMD",
+      "action": "buy",
+      "call_date": "2026-02-20",
+      "alpha": 1.5988,
+      "stock_return": 1.6848,
+      "quote": "we think there's a similar share gain story possible for AMD in the data center space with regards to GPUs. They've won customers like OpenAI and Meta, and are looking to extend that list as they have",
+      "source_url": "https://www.youtube.com/watch?v=Ol_Z24Wtv1g"
+    },
+    "worst_call": {
+      "ticker": "GOOGL",
+      "action": "hold-avoid",
+      "call_date": "2025-06-20",
+      "alpha": -0.9463,
+      "stock_return": 1.2135,
+      "quote": "We worry about Apple as we've told you many times uh somewhat uh Alphabet as well but all of them will be touched in some way uh by disruption to the traditional world order.",
+      "source_url": "https://www.youtube.com/watch?v=M2i-FfBMnVg"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "convexity",
+    "name": "Convexity (Rohit Srivastava)",
+    "market": "india",
+    "calls_extracted": 165,
+    "calls_scored": 37,
+    "hit_rate": 0.6216,
+    "avg_alpha": 0.0585,
+    "median_alpha": 0.0287,
+    "avg_signed_return": 0.0729,
+    "conviction_weighted_alpha": 0.064,
+    "best_call": {
+      "ticker": "SILVER",
+      "action": "buy",
+      "call_date": "2025-10-20",
+      "alpha": 0.6686,
+      "stock_return": 0.6114,
+      "quote": "\u0913\u0935\u0930\u0911\u0932 \u091c\u094b \u0938\u094b\u0928\u093e \u091a\u093e\u0902\u0926\u0940 \u0915\u093e \u092c\u0941\u0932 \u092e\u093e\u0930\u094d\u0915\u0947\u091f \u0936\u0941\u0930\u0942 \u0939\u0941\u0906 \u0909\u0938\u0915\u093e \u0905\u0902\u0924 \u0924\u094b \u0928\u0939\u0940\u0902 \u0939\u094b\u0917\u093e... \u0928\u0908-\u0928\u0908 \u0924\u0947\u091c\u0940 \u0915\u0947 \u0930\u093e\u0909\u0902\u0921\u094d\u0938 \u0939\u092e \u0932\u094b\u0917 \u091c\u0930\u0942\u0930 \u0926\u0947\u0916\u0947\u0902\u0917\u0947 \u0938\u094b\u0928\u093e \u091a\u093e\u0902\u0926\u0940 \u092e\u0947\u0902\u0964 (Overall gold/silver bull market has not ended... new rounds of gains we ",
+      "source_url": "https://www.youtube.com/watch?v=GXagpuvI9jU"
+    },
+    "worst_call": {
+      "ticker": "HINDALCO",
+      "action": "sell",
+      "call_date": "2026-02-20",
+      "alpha": -0.1403,
+      "stock_return": 0.0794,
+      "quote": "Commodity metal sector mein puri boom... trade khatam ho chuka hai. We are out. I am out of this trade. Opportunities are on the short side for commodities.",
+      "source_url": "https://www.youtube.com/watch?v=NNDYbjN79hQ"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "financial-education",
+    "name": "Financial Education (Jeremy Lefebvre)",
+    "market": "us",
+    "calls_extracted": 628,
+    "calls_scored": 623,
+    "hit_rate": 0.3836,
+    "avg_alpha": -0.0123,
+    "median_alpha": -0.0874,
+    "avg_signed_return": 0.0555,
+    "conviction_weighted_alpha": 0.0072,
+    "best_call": {
+      "ticker": "MU",
+      "action": "buy",
+      "call_date": "2025-11-20",
+      "alpha": 2.643,
+      "stock_return": 2.7877,
+      "quote": "Micron MU is benefiting huge from AMD cuz AMD's going to use a ton of Micron memory in the 450 series. MU is a huge beneficiary of that. Memory is just a hot play right now and people play MU for that",
+      "source_url": "https://www.youtube.com/watch?v=2XEQr2TkIO8"
+    },
+    "worst_call": {
+      "ticker": "MU",
+      "action": "hold-avoid",
+      "call_date": "2026-02-20",
+      "alpha": -1.5635,
+      "stock_return": 1.6496,
+      "quote": "Micron, is it easy money or a trap? It's a trap. I would not be a buyer of MU stock for the remainder of this year. It's best to position out of that this year in 2026. The prices you'll see in 2026 f",
+      "source_url": "https://www.youtube.com/watch?v=eAT1PB-DOHY"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "ghanshyam-tech",
+    "name": "Ghanshyam Tech",
+    "market": "india",
+    "calls_extracted": 36,
+    "calls_scored": 26,
+    "hit_rate": 0.5,
+    "avg_alpha": -0.0056,
+    "median_alpha": 0.0073,
+    "avg_signed_return": 0.0625,
+    "conviction_weighted_alpha": -0.0072,
+    "best_call": {
+      "ticker": "BRITANNIA",
+      "action": "buy",
+      "call_date": "2022-06-20",
+      "alpha": 0.1397,
+      "stock_return": 0.3398,
+      "quote": "\u092c\u094d\u0930\u093f\u091f\u093e\u0928\u093f\u092f\u093e \u0915\u0932 \u0905\u092a\u0921\u0947\u091f \u0915\u0930 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902, \u0906\u091c \u0915\u0947 \u0939\u093e\u0908 \u0915\u094d\u0932\u093f\u0915 \u0915\u0930\u0947\u0902 \u0907\u0938\u0915\u094b \u0922\u0902\u0917 \u0938\u0947 \u091f\u093e\u0930\u0917\u0947\u091f \u0906\u092a\u0915\u094b 4050 \u0915\u0947 \u092e\u093f\u0932 \u091c\u093e\u090f\u0902\u0917\u0947 (Britannia: if today's high is clicked properly, target 4050)",
+      "source_url": "https://www.youtube.com/watch?v=j3wTVWYL4v0"
+    },
+    "worst_call": {
+      "ticker": "WIPRO",
+      "action": "buy",
+      "call_date": "2022-06-20",
+      "alpha": -0.2618,
+      "stock_return": -0.0617,
+      "quote": "\u0935\u093f\u092a\u094d\u0930\u094b \u092e\u0947\u0902 \u0905\u0917\u0930 \u0907\u0938 \u0930\u0947\u0902\u091c \u0915\u094b \u092c\u094d\u0930\u0947\u0915 \u0915\u0930\u0915\u0947 640 \u0915\u0947 \u090a\u092a\u0930 \u0926\u093f\u0928 \u092d\u0940 \u0915\u094d\u0932\u094b\u091c \u0915\u0930\u0924\u093e \u0939\u0941\u0906 \u0926\u0947\u0916\u093f\u090f \u0906\u092a \u0932\u0947\u0915\u0930 \u091c\u093e\u0907\u090f 660 \u0914\u0930 \u091f\u093e\u0930\u0917\u0947\u091f (Wipro: if it closes above 640, take it to 660 and beyond as target)",
+      "source_url": "https://www.youtube.com/watch?v=j3wTVWYL4v0"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "kunal-saraogi",
+    "name": "Kunal Saraogi (Equityrush)",
+    "market": "india",
+    "calls_extracted": 78,
+    "calls_scored": 55,
+    "hit_rate": 0.4,
+    "avg_alpha": 0.0386,
+    "median_alpha": -0.0243,
+    "avg_signed_return": 0.0388,
+    "conviction_weighted_alpha": 0.0422,
+    "best_call": {
+      "ticker": "HFCL",
+      "action": "buy",
+      "call_date": "2026-04-20",
+      "alpha": 1.2611,
+      "stock_return": 1.2466,
+      "quote": "HFCL ke chart par bada breakout gaye saptah chart par aata hua dikha. Saare indicators crossover dikha rahe hain. Is saptah ka chart of the week HFCL ko diya ja raha hai.",
+      "source_url": "https://www.youtube.com/watch?v=X0bhCloi9H4"
+    },
+    "worst_call": {
+      "ticker": "GRSE",
+      "action": "buy",
+      "call_date": "2025-06-20",
+      "alpha": -0.3323,
+      "stock_return": -0.2983,
+      "quote": "Garden Reach Shipbuilders ko is saptah chart of the week ka khitab diya ja raha hai. Consolidation ke baad bada breakout hua hai.",
+      "source_url": "https://www.youtube.com/watch?v=aUOnevXBObE"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "meet-kevin",
+    "name": "Meet Kevin (Kevin Paffrath)",
+    "market": "us",
+    "calls_extracted": 155,
+    "calls_scored": 146,
+    "hit_rate": 0.4589,
+    "avg_alpha": 0.0088,
+    "median_alpha": -0.0131,
+    "avg_signed_return": 0.0266,
+    "conviction_weighted_alpha": 0.0079,
+    "best_call": {
+      "ticker": "ARM",
+      "action": "buy",
+      "call_date": "2026-04-15",
+      "alpha": 1.6911,
+      "stock_return": 1.758,
+      "quote": "I am really tempted to buy ARM. People are totally downplaying how useful CPUs are going to be. CPUs will likely grow more due to the inference workloads that are coming and people are not paying atte",
+      "source_url": "https://www.youtube.com/watch?v=DglqEYPmZmg"
+    },
+    "worst_call": {
+      "ticker": "SNDK",
+      "action": "sell",
+      "call_date": "2026-03-09",
+      "alpha": -2.607,
+      "stock_return": 2.711,
+      "quote": "I started calling for trailing stops on SanDisk and it looks like SanDisk is now going to open up under 500. So, this one's really started to sell-off and that is likely to continue as it is. A commod",
+      "source_url": "https://www.youtube.com/watch?v=3Qzyy_l9nls"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "nooresh",
+    "name": "Nooresh Merani",
+    "market": "india",
+    "calls_extracted": 21,
+    "calls_scored": 11,
+    "hit_rate": 0.5455,
+    "avg_alpha": 0.002,
+    "median_alpha": 0.015,
+    "avg_signed_return": 0.0761,
+    "conviction_weighted_alpha": 0.0287,
+    "best_call": {
+      "ticker": "SIEMENS",
+      "action": "sell",
+      "call_date": "2024-06-20",
+      "alpha": 0.1803,
+      "stock_return": -0.1045,
+      "quote": "ABB seens yeah all of them... so across the whole capital good space this is a time to actually book profits, the risk reward is off, so that is a clear cut avoid",
+      "source_url": "https://www.youtube.com/watch?v=61TFuvqyrYk"
+    },
+    "worst_call": {
+      "ticker": "HDFCBANK",
+      "action": "buy",
+      "call_date": "2023-06-20",
+      "alpha": -0.2043,
+      "stock_return": 0.0454,
+      "quote": "will HDFC Bank in next one year give positive return... HDFC bank would be the biggest Contra trade going forward not as of now",
+      "source_url": "https://www.youtube.com/watch?v=RaaRlDRURec"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "power-of-stocks",
+    "name": "Power of Stocks (Subasish Pani)",
+    "market": "india",
+    "calls_extracted": 30,
+    "calls_scored": 8,
+    "hit_rate": 0.625,
+    "avg_alpha": 0.0709,
+    "median_alpha": 0.0394,
+    "avg_signed_return": 0.0652,
+    "conviction_weighted_alpha": 0.0404,
+    "best_call": {
+      "ticker": "GOLDBEES",
+      "action": "buy",
+      "call_date": "2025-06-20",
+      "alpha": 0.5005,
+      "stock_return": 0.4568,
+      "quote": "Gold allocation of 10% recommended. Gold chart from 2020 shows barely 1-2% fall during crash, then continued rallying from 40,000 to 55,000. Gold saves your portfolio during recession. I keep 10% in g",
+      "source_url": "https://www.youtube.com/watch?v=w4MF8LB0ra8"
+    },
+    "worst_call": {
+      "ticker": "ITBEES",
+      "action": "buy",
+      "call_date": "2025-06-20",
+      "alpha": -0.2375,
+      "stock_return": -0.2813,
+      "quote": "IT ETF is there. I have it in my portfolio - bought 3-4 months ago showing 20-25% returns. ETF is compulsory at any level. It diversifies and keeps slow and steady growth.",
+      "source_url": "https://www.youtube.com/watch?v=w4MF8LB0ra8"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "pr-sundar",
+    "name": "P R Sundar",
+    "market": "india",
+    "calls_extracted": 45,
+    "calls_scored": 24,
+    "hit_rate": 0.5833,
+    "avg_alpha": 0.0302,
+    "median_alpha": 0.0048,
+    "avg_signed_return": 0.0242,
+    "conviction_weighted_alpha": 0.0278,
+    "best_call": {
+      "ticker": "INFY",
+      "action": "sell",
+      "call_date": "2026-03-20",
+      "alpha": 0.2017,
+      "stock_return": -0.1628,
+      "quote": "Infosys ADR is down by more than 2%. So it's going to be panic. So I do not know what the domestic institutions are planning.",
+      "source_url": "https://www.youtube.com/watch?v=CadS-gtXihU"
+    },
+    "worst_call": {
+      "ticker": "BSE",
+      "action": "buy",
+      "call_date": "2026-05-20",
+      "alpha": -0.062,
+      "stock_return": -0.047,
+      "quote": "if BSE is coming to Nifty 50, we'll see more action, so more money will be flowing into that. And then that will directly benefit NSE also because NSE is planning with its IPO.",
+      "source_url": "https://www.youtube.com/watch?v=upE1vgxmC5E"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "shankar-nath",
+    "name": "Shankar Nath",
+    "market": "india",
+    "calls_extracted": 73,
+    "calls_scored": 55,
+    "hit_rate": 0.4364,
+    "avg_alpha": -0.0188,
+    "median_alpha": -0.0305,
+    "avg_signed_return": -0.0028,
+    "conviction_weighted_alpha": 0.0175,
+    "best_call": {
+      "ticker": "SILVERIETF",
+      "action": "buy",
+      "call_date": "2025-06-20",
+      "alpha": 0.8383,
+      "stock_return": 0.8723,
+      "quote": "I'm certainly hopeful and expecting a bit more dun to be generated from Silver over the next few months... I for one have been advocating having 5 to 10% of your wealth in Commodities like gold and si",
+      "source_url": "https://www.youtube.com/watch?v=QS2Hf5mT-OE"
+    },
+    "worst_call": {
+      "ticker": "ADANIGREEN",
+      "action": "buy",
+      "call_date": "2024-06-20",
+      "alpha": -0.5409,
+      "stock_return": -0.4754,
+      "quote": "the stocks associated with this mega trend had a stellar 2023 with most of these stocks delivering 100% or more in profits... honestly, there is little evidence to suggest that this rally will not con",
+      "source_url": "https://www.youtube.com/watch?v=o0xjYem2aJ0"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "soic",
+    "name": "SOIC (School of Intelligent Investing)",
+    "market": "india",
+    "calls_extracted": 159,
+    "calls_scored": 131,
+    "hit_rate": 0.6565,
+    "avg_alpha": 0.1292,
+    "median_alpha": 0.0551,
+    "avg_signed_return": 0.1353,
+    "conviction_weighted_alpha": 0.1539,
+    "best_call": {
+      "ticker": "MU",
+      "action": "buy",
+      "call_date": "2025-10-19",
+      "alpha": 4.3701,
+      "stock_return": 4.4888,
+      "quote": "companies like SK hynix, companies like micron, they are still at 15-20p, and these companies are sitting or looking at a multi-year order cycle... HBM chips demand has exploded like anything",
+      "source_url": "https://www.youtube.com/watch?v=SteBQ9EbzL0"
+    },
+    "worst_call": {
+      "ticker": "WAAREEENER",
+      "action": "hold-avoid",
+      "call_date": "2025-04-06",
+      "alpha": -0.5204,
+      "stock_return": 0.6437,
+      "quote": "Waaree ka 54% order book is from US. And this will be subject to a 26% tariff and additional custom duty. Effectively it makes exporting solar panels out of India basically null and void. Yeh ek bahut",
+      "source_url": "https://www.youtube.com/watch?v=K9ZBdwc-aQU"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "stock-moe",
+    "name": "Stock Moe",
+    "market": "us",
+    "calls_extracted": 199,
+    "calls_scored": 177,
+    "hit_rate": 0.2768,
+    "avg_alpha": -0.0601,
+    "median_alpha": -0.0656,
+    "avg_signed_return": -0.0481,
+    "conviction_weighted_alpha": -0.0611,
+    "best_call": {
+      "ticker": "PANW",
+      "action": "buy",
+      "call_date": "2026-04-20",
+      "alpha": 0.6436,
+      "stock_return": 0.6972,
+      "quote": "PANW, as we see more hostilities...if the peace doesn't hold, Iran starts to do these cyber warfare attacks, they're going to get a lot more orders. Pay attention to this.",
+      "source_url": "https://www.youtube.com/watch?v=3zmAW3NPBzI"
+    },
+    "worst_call": {
+      "ticker": "ETH",
+      "action": "buy",
+      "call_date": "2026-04-20",
+      "alpha": -0.3215,
+      "stock_return": -0.2678,
+      "quote": "Pay attention to the big three, XRP, Bitcoin, and Ethereum...once the government codifies this, commodity, all that stuff that goes with it, it's big.",
+      "source_url": "https://www.youtube.com/watch?v=3zmAW3NPBzI"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "tom-lee",
+    "name": "Tom Lee (Fundstrat / FS Insight)",
+    "market": "us",
+    "calls_extracted": 196,
+    "calls_scored": 182,
+    "hit_rate": 0.3571,
+    "avg_alpha": -0.0514,
+    "median_alpha": -0.0246,
+    "avg_signed_return": 0.0103,
+    "conviction_weighted_alpha": -0.0561,
+    "best_call": {
+      "ticker": "AMD",
+      "action": "buy",
+      "call_date": "2026-01-20",
+      "alpha": 1.212,
+      "stock_return": 1.317,
+      "quote": "Nvidia, top five idea. AMD, Meta, Goldman, Arista Networks.",
+      "source_url": "https://www.youtube.com/watch?v=e25brnKdSvk"
+    },
+    "worst_call": {
+      "ticker": "ETH",
+      "action": "buy",
+      "call_date": "2026-01-20",
+      "alpha": -0.5333,
+      "stock_return": -0.4282,
+      "quote": "I think Ethereum, which is around 3,000, can easily get to 9,000, 7,000 uh in early 2026, and then over time uh as it starts to be competitive with uh payment rails, you know, could get to the 20,000 ",
+      "source_url": "https://www.youtube.com/watch?v=e25brnKdSvk"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "tom-nash",
+    "name": "Tom Nash",
+    "market": "us",
+    "calls_extracted": 212,
+    "calls_scored": 210,
+    "hit_rate": 0.481,
+    "avg_alpha": 0.0276,
+    "median_alpha": -0.0117,
+    "avg_signed_return": 0.1114,
+    "conviction_weighted_alpha": 0.0265,
+    "best_call": {
+      "ticker": "MU",
+      "action": "buy",
+      "call_date": "2026-03-20",
+      "alpha": 1.5312,
+      "stock_return": 1.6826,
+      "quote": "Micron, the new addition I'm going to add to my top stocks list. This is one of the best picks and shovels plays in history... for the next 5 10 years, there's very little chance to zero chance of any",
+      "source_url": "https://www.youtube.com/watch?v=A-UimFiyHTU"
+    },
+    "worst_call": {
+      "ticker": "WOLF",
+      "action": "hold-avoid",
+      "call_date": "2026-01-20",
+      "alpha": -1.6954,
+      "stock_return": 1.8005,
+      "quote": "Net income in 2025 was negative 560 million, bleeding almost 700 million a year in free cash flow... the stock MVP scorecard was 50 out of 100 a complete fail.",
+      "source_url": "https://www.youtube.com/watch?v=UWCW9kgf7KU"
+    },
+    "low_sample": false
+  },
+  {
+    "creator_id": "vivek-bajaj",
+    "name": "Vivek Bajaj (StockEdge)",
+    "market": "india",
+    "calls_extracted": 135,
+    "calls_scored": 114,
+    "hit_rate": 0.5088,
+    "avg_alpha": 0.0321,
+    "median_alpha": 0.0021,
+    "avg_signed_return": 0.0208,
+    "conviction_weighted_alpha": 0.0354,
+    "best_call": {
+      "ticker": "SILVER",
+      "action": "buy",
+      "call_date": "2025-06-20",
+      "alpha": 1.1933,
+      "stock_return": 1.1496,
+      "quote": "Compared to gold, I think this year, silver should do better than gold. The rest, time will tell.",
+      "source_url": "https://www.youtube.com/watch?v=E2y8vsVH4No"
+    },
+    "worst_call": {
+      "ticker": "VEDL",
+      "action": "buy",
+      "call_date": "2026-02-20",
+      "alpha": -0.4909,
+      "stock_return": -0.5519,
+      "quote": "\u0924\u094b \u0939\u093f\u0902\u0926\u0941\u0938\u094d\u0924\u093e\u0928 \u0915\u0949\u092a\u0930 \u092e\u093f\u0932 \u0917\u092f\u093e, Vedanta \u092e\u093f\u0932 \u0917\u092f\u093e, Halco \u092e\u093f\u0932 \u0917\u092f\u093e \u0914\u0930 Adani Enterprises \u092e\u093f\u0932 \u0917\u092f\u093e\u0964 \u0924\u094b \u0907\u0928\u092e\u0947\u0902 \u0906\u092a \u090f\u0938\u0906\u0908\u092a\u0940 \u091a\u093e\u0932\u0942 \u0915\u0930 \u0926\u0940\u091c\u093f\u090f\u0964 \u0926\u0947\u092f\u0930 \u0907\u091c\u093c \u0928\u094b \u0905\u0926\u0930 \u0935\u0947\u0964",
+      "source_url": "https://www.youtube.com/watch?v=z6lDyJVtlAM"
+    },
+    "low_sample": false
+  }
+]

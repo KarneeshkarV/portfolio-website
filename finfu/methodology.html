@@ -1,0 +1,72 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Methodology</title><style>
+:root{--bg:#0b0e14;--panel:#141925;--panel2:#1b2230;--line:#262f40;--txt:#e6e9ef;
+--muted:#8b95a7;--accent:#5b9bff;--green:#2fd27a;--red:#ff5d6c;--amber:#ffc24b;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+header.top{border-bottom:1px solid var(--line);padding:22px 0;margin-bottom:8px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:20px;margin:34px 0 12px}
+.sub{color:var(--muted);font-size:14px}
+.crumb{color:var(--muted);font-size:13px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.card .v{font-size:24px;font-weight:650;margin-top:6px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--panel2);color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#192234}
+.pos{color:var(--green)}.neg{color:var(--red)}.flat{color:var(--muted)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid var(--line)}
+.badge.buy{color:var(--green);border-color:#1f5a3d;background:#10251a}
+.badge.sell{color:var(--red);border-color:#5a1f28;background:#251014}
+.badge.in{color:var(--accent);border-color:#234a7a;background:#0f1c2e}
+.badge.lo{color:var(--amber);border-color:#5a4a1f;background:#251f10}
+.rank{color:var(--muted);font-variant-numeric:tabular-nums}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;color:var(--muted);font-size:13px;margin:14px 0}
+.quote{color:var(--muted);font-style:italic;max-width:520px;white-space:normal}
+.pill{font-size:12px;color:var(--muted)}
+.bar{height:6px;border-radius:3px;background:var(--panel2);overflow:hidden;margin-top:8px}
+.bar>i{display:block;height:100%}
+footer{margin-top:50px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:16px}
+.tabs a{margin-right:16px}
+.win{color:var(--green)}.lose{color:var(--red)}
+</style></head><body><div class="wrap">
+<header class="top"><div class="tabs">
+<a href="index.html">🏆 Scoreboard</a>
+<a href="methodology.html">📋 Methodology</a>
+<a href="data/scored_calls.csv">⬇ CSV</a>
+<a href="data/scored_calls.json">⬇ JSON</a>
+</div></header>
+<div class="crumb"><a href="index.html">Scoreboard</a> › Methodology</div>
+<h1>Methodology &amp; coverage</h1>
+<div class="note"><b>Pipeline.</b> (1) Enumerate last-5-yr uploads via
+<code>yt-dlp --flat-playlist</code> (no API key). (2) Fetch transcripts:
+<code>youtube-transcript-api</code> → <code>yt-dlp</code> auto-subs → Jina Reader
+fallback. (3) LLM structured extraction of forward calls (ticker, action, target,
+horizon, conviction, quote). (4) Adversarial second-pass verification — commentary
+and pure historical disclosure are dropped; majority-refute discards the call.
+(5) Backtest each surviving call against this repo's price/benchmark data layer
+(yfinance; SPY for US, ^NSEI for India); alpha = direction-adjusted, benchmark-relative
+return over the stated (or default 6-month) horizon. (6) Aggregate per creator.</div>
+<div class="note"><b>Honesty on gaps.</b> Only forward, dated calls are scored — pure
+"here's what I hold" disclosure is excluded. X/Twitter, Telegram, TikTok have no free
+no-key historical path, so X-primary creators with no YouTube uploads are listed below
+as <i>skipped</i> rather than silently dropped. Transcript coverage overall:
+<b>100.0%</b> of in-window videos yielded free text
+(1882/1882).</div>
+<h2>Per-creator sources &amp; coverage</h2><table><thead><tr><th>Creator</th><th>Mkt</th><th>Source used</th><th>Coverage</th><th>Notes</th></tr></thead><tbody><tr><td>SOIC (School of Intelligent Investing)</td><td>INDIA</td><td>YouTube @SOICfinance</td><td>0 vids · 87 transcripts · 131 calls</td><td class='quote'>Long-term/fundamental quality compounders; high-conviction thesis stocks. channel UCB7GnQlJPIL6rBBqEoX87vA.</td></tr><tr><td>Vivek Bajaj (StockEdge)</td><td>INDIA</td><td>YouTube @VivekBajaj</td><td>819 vids · 120 transcripts · 114 calls</td><td class='quote'>Fundamental+technical, tools/StockEdge; scans & ideas. Replaces the prompt's 'Vijay Bajaj' (no standalone Vijay Bajaj/RMS YouTube channel exists; @VijayBajaj/@TheTradeRoom are lookalikes).</td></tr><tr><td>Shankar Nath</td><td>INDIA</td><td>YouTube @shankarnath</td><td>197 vids · 120 transcripts · 55 calls</td><td class='quote'>Long-term/fundamental, ETFs, model portfolios.</td></tr><tr><td>Power of Stocks (Subasish Pani)</td><td>INDIA</td><td>YouTube @POWEROFSTOCKSBySubasish</td><td>318 vids · 120 transcripts · 8 calls</td><td class='quote'>Technical/options/scalping; live levels & option calls.</td></tr><tr><td>Nooresh Merani</td><td>INDIA</td><td>YouTube @Nooresh</td><td>306 vids · 115 transcripts · 11 calls</td><td class='quote'>Veteran technical analyst (SEBI RA); chart calls and targets. Small YouTube vs X/TV presence.</td></tr><tr><td>Kunal Saraogi (Equityrush)</td><td>INDIA</td><td>YouTube @KunalSaraogiChannel</td><td>538 vids · 120 transcripts · 55 calls</td><td class='quote'>Technical/swing (SEBI RA); swing calls and levels.</td></tr><tr><td>Convexity (Rohit Srivastava)</td><td>INDIA</td><td>YouTube @IndiaCharts</td><td>410 vids · 120 transcripts · 37 calls</td><td class='quote'>Technical/market-timing; index & stock targets, EW/cycles.</td></tr><tr><td>Ghanshyam Tech</td><td>INDIA</td><td>YouTube @GhanshyamTech</td><td>263 vids · 120 transcripts · 26 calls</td><td class='quote'>Hindi options & technical trading; levels and trades.</td></tr><tr><td>P R Sundar</td><td>INDIA</td><td>YouTube @PRSundar64</td><td>1546 vids · 120 transcripts · 24 calls</td><td class='quote'>Options selling/derivatives; strategy-level more than single-stock targets.</td></tr><tr><td>Akshat Shrivastava (Wisdom Hatch)</td><td>INDIA</td><td>YouTube @AkshatZayn</td><td>827 vids · 120 transcripts · 212 calls</td><td class='quote'>Macro/markets + long-term investing; INSEAD, ex-BCG, runs a fund. Verified handle @AkshatZayn (NOT @AkshatShrivastava, a lookalike); channel UCqW8jxh4tH1Z1sWPbkGWL4g.</td></tr><tr><td>Meet Kevin (Kevin Paffrath)</td><td>US</td><td>YouTube @MeetKevin</td><td>0 vids · 120 transcripts · 146 calls</td><td class='quote'>Active trading, growth/tech; explicit buys & price targets. @realMeetKevin has no videos tab; @MeetKevin is the uploads channel.</td></tr><tr><td>Cathie Wood / ARK Invest</td><td>US</td><td>YouTube @ARKInvest2015</td><td>522 vids · 120 transcripts · 79 calls</td><td class='quote'>Disruptive-innovation growth; bold 5-yr price targets. Non-obvious handle @ARKInvest2015 (channel UCK-zlnUfoDHzUwXcbddtnkg).</td></tr><tr><td>Tom Lee (Fundstrat / FS Insight)</td><td>US</td><td>YouTube @Fundstrat_Direct</td><td>618 vids · 120 transcripts · 182 calls</td><td class='quote'>Macro strategist; S&P targets & sector calls.</td></tr><tr><td>Tom Nash</td><td>US</td><td>YouTube @TomNashTV</td><td>856 vids · 120 transcripts · 210 calls</td><td class='quote'>Long-term growth (TSLA, PLTR); bull theses with upside multiples.</td></tr><tr><td>Financial Education (Jeremy Lefebvre)</td><td>US</td><td>YouTube @FinancialEducation</td><td>1496 vids · 120 transcripts · 623 calls</td><td class='quote'>Growth-stock picks; often cited for poor 2021-22 accuracy.</td></tr><tr><td>Stock Moe</td><td>US</td><td>YouTube @StockMoe</td><td>522 vids · 120 transcripts · 177 calls</td><td class='quote'>Growth stocks & options; picks-heavy.</td></tr><tr><td>Chris Camillo (Dumb Money)</td><td>US</td><td>YouTube @DumbMoney</td><td>2 vids · 0 transcripts · 0 calls</td><td class='quote'>Social-arbitrage trend trading. Group channel (3 hosts); uploads tab dormant since ~2021 (activity moved to livestreams) so in-window coverage is thin.</td></tr><tr><td>Sandeep Wagle</td><td>INDIA</td><td><span class="flat">skipped — no free no-key YouTube path (TV/X/Instagram only)</span></td><td>—</td><td class='quote'>Pure technical; TV (Zee Business)/Instagram/X only.</td></tr><tr><td>Jim Cramer (Mad Money)</td><td>US</td><td><span class="flat">skipped — no dedicated free YouTube channel (CNBC-only)</span></td><td>—</td><td class='quote'>Extremely call-heavy; 'Inverse Cramer' meme. No dedicated free channel; clips live only inside CNBC's general channel (too broad to attribute).</td></tr><tr><td>Gary Black (Future Fund)</td><td>US</td><td><span class="flat">skipped — no free no-key YouTube path (X only)</span></td><td>—</td><td class='quote'>Growth (esp. TSLA) price targets; X-primary, only guests elsewhere.</td></tr><tr><td>Will Meade</td><td>US</td><td><span class="flat">skipped — no free no-key YouTube path (X/paid Substack only)</span></td><td>—</td><td class='quote'>Macro/momentum trade calls; X + paid Substack only.</td></tr></tbody></table>
+<div class="note"><b>Limitations.</b> Approximate upload dates from flat enumeration;
+LLMs over-classify commentary as calls (mitigated by the adversarial pass but not
+eliminated); survivorship bias on delisted India names; benchmark-relative scoring
+ignores position sizing and intraday timing; low-sample creators are indicative only.</div>
+<footer>Finfluencer Prediction Scoreboard · window 2021-06-20→2026-06-20 ·
+generated 2026-06-21 · prices &amp; benchmarks via this repo's
+screener.backtester data layer (yfinance, SPY / ^NSEI). Forward-looking,
+benchmark-relative, direction-adjusted alpha. Not investment advice.</footer>
+</div></body></html>

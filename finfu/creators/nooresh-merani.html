@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nooresh Merani</title><style>
+:root{--bg:#0b0e14;--panel:#141925;--panel2:#1b2230;--line:#262f40;--txt:#e6e9ef;
+--muted:#8b95a7;--accent:#5b9bff;--green:#2fd27a;--red:#ff5d6c;--amber:#ffc24b;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+header.top{border-bottom:1px solid var(--line);padding:22px 0;margin-bottom:8px}
+h1{font-size:26px;margin:0 0 4px}h2{font-size:20px;margin:34px 0 12px}
+.sub{color:var(--muted);font-size:14px}
+.crumb{color:var(--muted);font-size:13px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+.card .k{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.card .v{font-size:24px;font-weight:650;margin-top:6px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:var(--panel2);color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#192234}
+.pos{color:var(--green)}.neg{color:var(--red)}.flat{color:var(--muted)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid var(--line)}
+.badge.buy{color:var(--green);border-color:#1f5a3d;background:#10251a}
+.badge.sell{color:var(--red);border-color:#5a1f28;background:#251014}
+.badge.in{color:var(--accent);border-color:#234a7a;background:#0f1c2e}
+.badge.lo{color:var(--amber);border-color:#5a4a1f;background:#251f10}
+.rank{color:var(--muted);font-variant-numeric:tabular-nums}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;color:var(--muted);font-size:13px;margin:14px 0}
+.quote{color:var(--muted);font-style:italic;max-width:520px;white-space:normal}
+.pill{font-size:12px;color:var(--muted)}
+.bar{height:6px;border-radius:3px;background:var(--panel2);overflow:hidden;margin-top:8px}
+.bar>i{display:block;height:100%}
+footer{margin-top:50px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:16px}
+.tabs a{margin-right:16px}
+.win{color:var(--green)}.lose{color:var(--red)}
+</style></head><body><div class="wrap">
+<header class="top"><div class="tabs">
+<a href="../index.html">🏆 Scoreboard</a>
+<a href="../methodology.html">📋 Methodology</a>
+<a href="../data/scored_calls.csv">⬇ CSV</a>
+<a href="../data/scored_calls.json">⬇ JSON</a>
+</div></header>
+<div class="crumb"><a href="../index.html">Scoreboard</a> ›
+🇮🇳 India</div>
+<h1>Nooresh Merani</h1>
+<div class="sub">INDIA · ranked on benchmark-relative alpha vs
+^NSEI</div>
+<div class="grid">
+<div class="card"><div class="k">Calls scored</div><div class="v">11</div>
+<div class="pill">21 extracted</div></div>
+<div class="card"><div class="k">Hit rate</div><div class="v">55%</div></div>
+<div class="card"><div class="k">Avg alpha</div><div class="v"><span class="pos">+0.2%</span></div></div>
+<div class="card"><div class="k">Conv-wtd alpha</div><div class="v"><span class="pos">+2.9%</span></div></div>
+</div><div class="note">🟢 <b>Best:</b> SIEMENS <span class="pos">+18.0%</span> — "ABB seens yeah all of them... so across the whole capital good space this is a time to actually book profits, the risk reward is off, so that is a clear cut avo"<br>🔴 <b>Worst:</b> HDFCBANK <span class="neg">-20.4%</span> — "will HDFC Bank in next one year give positive return... HDFC bank would be the biggest Contra trade going forward not as of now"</div><div class="note">Coverage: 115 transcripts fetched, 0 had no free text, of 306 in-window videos. Source mix: transcript-api:105, jina-lowconf:10.</div>
+<h2>All scored forward calls</h2><table><thead><tr><th>Date</th><th>Ticker</th><th>Action</th><th>Conv.</th><th class='num'>Horizon</th><th class='num'>Stock</th><th class='num'>Bench</th><th class='num'>Alpha</th><th class='num'>Hit</th><th>Quote / source</th></tr></thead><tbody><tr><td>2022-06-20</td><td><b>AXISBANK</b> <span class='pill'>AXISBANK.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge in">high</span></td><td class='num'>3m</td><td class='num'><span class="pos">+27.2%</span></td><td class='num'><span class="pos">+14.8%</span></td><td class='num'><span class="pos">+12.4%</span></td><td class='num'>✓</td><td class='quote'>access bank becomes now the top preference so this is a stock to kept on watch to be kept on watch for a new leadership price to watch for is equal to 800 to 820 band <a href='https://www.youtube.com/watch?v=saNp2LfGYoc'>↗</a></td></tr><tr><td>2023-06-20</td><td><b>HDFCBANK</b> <span class='pill'>HDFCBANK.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge lo">low</span></td><td class='num'>1y</td><td class='num'><span class="pos">+4.5%</span></td><td class='num'><span class="pos">+25.0%</span></td><td class='num'><span class="neg">-20.4%</span></td><td class='num'>✗</td><td class='quote'>will HDFC Bank in next one year give positive return... HDFC bank would be the biggest Contra trade going forward not as of now <a href='https://www.youtube.com/watch?v=RaaRlDRURec'>↗</a></td></tr><tr><td>2023-06-20</td><td><b>POWERGRID</b> <span class='pill'>POWERGRID.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge">med</span></td><td class='num'>6m</td><td class='num'><span class="pos">+30.1%</span></td><td class='num'><span class="pos">+14.0%</span></td><td class='num'><span class="pos">+16.1%</span></td><td class='num'>✓</td><td class='quote'>I don't want to give stock specific hold or sell but I do like power grid. Power Grid is very close to a new all-time high it's two percent of it so there could be a momentum cycle which is possible in PSU. <a href='https://www.youtube.com/watch?v=q46BmH5SaLI'>↗</a></td></tr><tr><td>2023-06-20</td><td><b>HDFCBANK</b> <span class='pill'>HDFCBANK.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge lo">low</span></td><td class='num'>3m</td><td class='num'><span class="pos">+1.3%</span></td><td class='num'><span class="pos">+7.0%</span></td><td class='num'><span class="neg">-5.7%</span></td><td class='num'>✗</td><td class='quote'>HDFC Bank like I said that could be a stock which could surprise on the upside. As a combined entity HDFC and HDFC Bank would be 15 to 17 of the Nifty and it has a three year resistance knocking at 1700 1740. <a href='https://www.youtube.com/watch?v=q46BmH5SaLI'>↗</a></td></tr><tr><td>2023-06-20</td><td><b>DRREDDY</b> <span class='pill'>DRREDDY.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge lo">low</span></td><td class='num'>1m</td><td class='num'><span class="pos">+9.8%</span></td><td class='num'><span class="pos">+6.2%</span></td><td class='num'><span class="pos">+3.6%</span></td><td class='num'>✓</td><td class='quote'>Dr Reddy is a short-term breakout <a href='https://www.youtube.com/watch?v=q46BmH5SaLI'>↗</a></td></tr><tr><td>2023-06-20</td><td><b>SBIN</b> <span class='pill'>SBIN.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge lo">low</span></td><td class='num'>6m</td><td class='num'><span class="pos">+15.5%</span></td><td class='num'><span class="pos">+14.0%</span></td><td class='num'><span class="pos">+1.5%</span></td><td class='num'>✓</td><td class='quote'>PSU Banks focus on the first top three names. The largest one SBI looks the most promising because that's a stock which has done nothing over the last many years the longer term charts are more interesting. <a href='https://www.youtube.com/watch?v=q46BmH5SaLI'>↗</a></td></tr><tr><td>2024-06-20</td><td><b>ABB</b> <span class='pill'>ABB.NS</span></td><td><span class="badge sell">sell</span></td><td><span class="badge in">high</span></td><td class='num'>6m</td><td class='num'><span class="neg">-13.8%</span></td><td class='num'><span class="pos">+1.6%</span></td><td class='num'><span class="pos">+15.4%</span></td><td class='num'>✓</td><td class='quote'>the avoid list is to look at avoid chemicals... large capital good companies... ABB seens yeah all of them... so across the whole capital good space this is a time to actually book profits <a href='https://www.youtube.com/watch?v=61TFuvqyrYk'>↗</a></td></tr><tr><td>2024-06-20</td><td><b>SIEMENS</b> <span class='pill'>SIEMENS.NS</span></td><td><span class="badge sell">sell</span></td><td><span class="badge in">high</span></td><td class='num'>1y</td><td class='num'><span class="neg">-10.4%</span></td><td class='num'><span class="pos">+7.6%</span></td><td class='num'><span class="pos">+18.0%</span></td><td class='num'>✓</td><td class='quote'>ABB seens yeah all of them... so across the whole capital good space this is a time to actually book profits, the risk reward is off, so that is a clear cut avoid <a href='https://www.youtube.com/watch?v=61TFuvqyrYk'>↗</a></td></tr><tr><td>2024-06-20</td><td><b>HINDALCO</b> <span class='pill'>HINDALCO.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge in">high</span></td><td class='num'>6m</td><td class='num'><span class="neg">-6.4%</span></td><td class='num'><span class="pos">+1.6%</span></td><td class='num'><span class="neg">-8.1%</span></td><td class='num'>✗</td><td class='quote'>hindalco is the new name which has broken out of a 2-year cup and handle, aluminium prices have bottomed out started showing a rally, very similarly we were placed on say vanta when copper was at $4, now aluminium could be the next trade <a href='https://www.youtube.com/watch?v=61TFuvqyrYk'>↗</a></td></tr><tr><td>2024-06-20</td><td><b>GESHIP</b> <span class='pill'>GESHIP.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge">med</span></td><td class='num'>6m</td><td class='num'><span class="neg">-11.9%</span></td><td class='num'><span class="pos">+1.6%</span></td><td class='num'><span class="neg">-13.6%</span></td><td class='num'>✗</td><td class='quote'>G shipping that's a stock which has been in a strong uptrend, we are seeing a lot of volumes bulk deals happen over the last few weeks, decent enough numbers which have come up for the quarter, so the stock looks interesting <a href='https://www.youtube.com/watch?v=61TFuvqyrYk'>↗</a></td></tr><tr><td>2024-06-20</td><td><b>DELHIVERY</b> <span class='pill'>DELHIVERY.NS</span></td><td><span class="badge buy">buy</span></td><td><span class="badge">med</span></td><td class='num'>1y</td><td class='num'><span class="neg">-10.6%</span></td><td class='num'><span class="pos">+6.6%</span></td><td class='num'><span class="neg">-17.2%</span></td><td class='num'>✗</td><td class='quote'>delivery... at 400 450 this looks interesting as a turnaround story in the New Age companies, very similar to what happened at PB Fintech at 400 rupees or Zomato, similar structure, stock is absolutely listless for the last 3 months <a href='https://www.youtube.com/watch?v=61TFuvqyrYk'>↗</a></td></tr></tbody></table>
+<div class="note">10 extracted calls could not be priced (no data / horizon outside window) and are excluded from scoring — see CSV for details.</div>
+<footer>Finfluencer Prediction Scoreboard · window 2021-06-20→2026-06-20 ·
+generated 2026-06-21 · prices &amp; benchmarks via this repo's
+screener.backtester data layer (yfinance, SPY / ^NSEI). Forward-looking,
+benchmark-relative, direction-adjusted alpha. Not investment advice.</footer>
+</div></body></html>
